@@ -1,0 +1,9 @@
+<?php
+  $_product = $block->getProduct();
+  // First method
+  $attribute_value = $_product->getResource()->getAttribute('product_note')->getFrontend()->getValue($_product);
+  // second method
+//   $attribute_value1 = $_product->getAttributeText('note');
+   
+?>
+<?php echo  $attribute_value ?>

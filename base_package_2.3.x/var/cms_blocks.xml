@@ -1,0 +1,1053 @@
+<?xml version="1.0"?>
+<root>
+  <blocks>
+    <item>
+      <title><![CDATA[Footer Static]]></title>
+      <identifier><![CDATA[footer_static]]></identifier>
+      <content><![CDATA[<div class="col-sm-4">
+<div class="footer-links">
+<h2 class="title">About Store</h2>
+<ul>
+<li><a href="#">About us</a></li>
+<li><a href="#">Offices</a></li>
+<li><a href="#">Work with us</a></li>
+<li><a href="#">Our policies</a></li>
+<li><a href="#">FAQs</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="footer-links">
+<h2 class="title">Top Categories</h2>
+<ul>
+<li><a href="#">TV & Video</a></li>
+<li><a href="#">Home Audio & Theater</a></li>
+<li><a href="#">Camera, Photo & Video</a></li>
+<li><a href="#">Cell Phones & Accessories</a></li>
+<li><a href="#">Headphones</a></li>
+<li><a href="#">Video Games</a></li>
+</ul>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="footer-links">
+<h2 class="title">Our Store</h2>
+<ul>
+<li><a href="#">New York</a></li>
+<li><a href="#">London SF</a></li>
+<li><a href="#">Cockfosters BP</a></li>
+<li><a href="#">Los Angeles</a></li>
+<li><a href="#">Chicago</a></li>
+<li><a href="#">Las Vegas</a></li>
+</ul>
+</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Top]]></title>
+      <identifier><![CDATA[banner_top]]></identifier>
+      <content><![CDATA[<div class="popcat-box bs_banner"><a class="banner_hover" href="#"><img src="{{media url="wysiwyg/banner_top.jpg"}}" alt=""></a></div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Custom Link Before]]></title>
+      <identifier><![CDATA[menu_custom_links_before]]></identifier>
+      <content><![CDATA[<ul>
+<li class="ui-menu-item level0 classic "><a class="level-top" href="{{store url=''}}"><span>Home</span></a></li>
+</ul>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Custom Link]]></title>
+      <identifier><![CDATA[menu_custom_links]]></identifier>
+      <content><![CDATA[<ul>
+<li class="ui-menu-item level0 classic parent ">
+<div class="open-children-toggle"></div>
+<a class="level-top" href="javascript:void(0)"> <span>Pages</span> </a>
+<div class="level0 submenu">
+<ul class="subchildmenu ">
+<li class="ui-menu-item level1"><a class="level-top" href="{{store url='blog'}}"><span>Blog</span></a></li>
+<li class="ui-menu-item level1 "><a class="level-top" href="{{store url='contact'}}"><span>Contact Us</span></a></li>
+<li class="ui-menu-item level1 "><a href="{{store url='about-us'}}"> <span>About Us</span> </a></li>
+<li class="ui-menu-item level1 "><a href="{{store url='privacy-policy-cookie-restriction-mode'}}"> <span>Privacy Policy</span> </a></li>
+</ul>
+</div>
+</li>
+<li class="ui-menu-item level0 classic "><a class="level-top" href="{{store url=''}}rokanthemes-brand.html"> <span>Brands</span> </a></li>
+</ul>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Brand logo]]></title>
+      <identifier><![CDATA[brand-logo]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Brand\Block\Widget\Brandlist" show_brand_name="0" brand_groups="1,2,3,4,5,6" number_item="12" default_item="6" destop_item="6" small_destop_item="4" tablet_item="3" mobile_item="1" show_next_back_control="1" show_navigation_control="0" auto_play_control="1"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Contact Us Info]]></title>
+      <identifier><![CDATA[contact-info]]></identifier>
+      <content><![CDATA[<h3>Our Main Office.</h3>
+<div class="short-des"><span style="color: #292929;">Organix</span> is a premium Templates theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive and retina ready. Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</div>
+<div class="pull-left"><img src="{{media url="wysiwyg/contact-us-icon.png"}}" alt="" /></div>
+<div class="media-body">
+<p>Hotline Free 24/24:</p>
+<span style="color: #df0e0e; background-color: #ffffff;">(+100) 123 456 7890</span></div>
+<ul>
+<li class="address">
+<p><strong>Add:</strong> 1234 Heaven Stress, Beverly Hill, Melbourne, USA.</p>
+</li>
+<li class="email">
+<p><strong>Email:</strong> Contact@erentheme.com</p>
+</li>
+<li class="phone">
+<p><strong>Fax: </strong>(+100) 123 456 7890 - (+100) 123 456 7891</p>
+</li>
+<li class="phone">
+<p><strong>Business Phone:</strong> (+100) 123 456 7890</p>
+</li>
+</ul>
+<div class="social-link">
+<p>Social Share:</p>
+<p>{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="17"}}</p>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Contact Maps]]></title>
+      <identifier><![CDATA[maps]]></identifier>
+      <content><![CDATA[<p><iframe style="border: 0px; display: block; margin-left: auto; margin-right: auto;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24201.246844804893!2d-111.94405300000001!3d40.692565!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90cf6256d98a62eb!2sValley+Fair+Mall!5e0!3m2!1sen!2sus!4v1487152442332" width="1400" height="600" frameborder="0" allowfullscreen=""></iframe></p>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[About us]]></title>
+      <identifier><![CDATA[about_top]]></identifier>
+      <content><![CDATA[<h3>About us</h3>
+<p class="subtitle">Claritas est etiam processus dynamicus, qui sequitur.</p>
+<div class="content">
+Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Top link]]></title>
+      <identifier><![CDATA[top_link]]></identifier>
+      <content><![CDATA[<ul class="top-link">
+<li><a href="{{store url="customer/account/login/"}}">Login</a></li>
+<li><a href="{{store url="customer/account/logout/"}}">Logout</a></li>
+<li><a href="{{store url="customer/account/"}}">My account</a></li>
+<li><a href="{{store url="wishlist/index/index/"}}">Wishlish</a></li>
+<li><a href="{{store url="checkout/"}}">My Cart</a></li>
+</ul>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Social Block]]></title>
+      <identifier><![CDATA[social_block]]></identifier>
+      <content><![CDATA[<ul>
+<li><a title="Dribbble" href="#"><span class="fa fa-dribbble"></span></a></li>
+<li><a title="Twitter" href="#"><span class="fa fa-twitter"></span></a></li>
+<li><a title="Instagram" href="#"><span class="fa fa-instagram"></span></a></li>
+<li><a title="Face-book" href="#"><span class="fa fa-facebook"></span></a></li>
+</ul>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Footer menu]]></title>
+      <identifier><![CDATA[footer_menu]]></identifier>
+      <content><![CDATA[<ul>
+<li><a title="blog" href="{{store url="blog"}}" target="_self">blog</a></li>
+<li><a title="about-us" href="#">About us</a></li>
+<li><a title="order tracking" href="#">order tracking </a></li>
+<li><a title="contact" href="#">contact</a></li>
+<li><a title="faq's" href="#"> faq's</a></li>
+</ul>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Shipping and Support info]]></title>
+      <identifier><![CDATA[shipping_support]]></identifier>
+      <content><![CDATA[<div class="col-sm-3 col-content" style="text-align: center;"><i style="padding-left:25px;" class="lnr lnr-car"> </i>
+<h4>Free Shipping</h4>
+<p>On orders over 100$</p>
+</div>
+<div class="col-sm-3 col-content" style="text-align: center;"><i style="padding-left:25px;" class="lnr lnr-history"> </i>
+<h4>Money Back 100%</h4>
+<p>Within 30 Days after delivery</p>
+</div>
+<div class="col-sm-3 col-content" style="text-align: center;"><i style="padding-left:25px;" class="lnr lnr-calendar-full"> </i>
+<h4>Working Time</h4>
+<p>Mon-Sun: 8.00-20.00</p>
+</div>
+<div class="col-sm-3 col-content" style="text-align: center;"><i style="padding-left:25px;" class="lnr lnr-phone"> </i>
+<h4>1 (234) 567 89 01</h4>
+<p>Order by phone</p>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Categories Tab]]></title>
+      <identifier><![CDATA[categories_tab]]></identifier>
+      <content><![CDATA[<p>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="New Arrivals"  color_box="red-box" identify="categories_tab" category_id="3,4,6,7,44" limit_qty="60" show_pager="0" slide_row="2" slide_limit="5" template="categorytab/grid.phtml"}}</p>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Footer about store]]></title>
+      <identifier><![CDATA[footer_info]]></identifier>
+      <content><![CDATA[<p style="text-align: center;"><img src="{{media url="wysiwyg/logo_1.png"}}" alt="" /></p>
+<div class="social-link">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="17"}}</div>
+<ul class="footer-contact">
+<li class="phone">+ (123) 8800-555-6690</li>
+<li class="time">Mon - Fri:9:00am - 19:00pm</li>
+<li class="email">info@example.com</li>
+</ul>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Top Bar Left]]></title>
+      <identifier><![CDATA[top_bar_left]]></identifier>
+      <content><![CDATA[<ul class="header_links">
+<li class="location">Store Location</li>
+<li class="track_order">Track Your Order</li>
+</ul>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Help Top]]></title>
+      <identifier><![CDATA[help_top]]></identifier>
+      <content><![CDATA[<a href="#" class="help"> Help </a>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Our stories]]></title>
+      <identifier><![CDATA[our_stories]]></identifier>
+      <content><![CDATA[<p><img src="{{media url="wysiwyg/our-stories.jpg"}}" alt="" /></p>
+<div class="our-stories-content">
+<h2>Our Stories</h2>
+<h3>We've recently updated our entire product portfolio to give customers and partners the best products with the newest technology.</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis risus leo, elementum in malesuada an darius ut augue. Cras sit amet lectus et justo feugiat euismod sed non erat. Nulla non felis id metus bibendum iaculis quis sit amet eros. Nam suscipit mollis tellus vel malesuada. Duis dan molestie, sem in sollicitudin sodales mi justo sagittis est id consequat ipsum ligula a ante.</p>
+<p><a class="view-more" href="#">Read More</a></p>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Shop by Categories]]></title>
+      <identifier><![CDATA[shop_by_categories]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="Shop by Categories" color_box="red-box" identify="featured_categories" category_id="4,7,44,6,45,46" slide_row="1" slide_limit="6" template="categorytab/catthumbnail.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Footer Address Payment]]></title>
+      <identifier><![CDATA[footer_address_payment]]></identifier>
+      <content><![CDATA[<p><img src="{{media url="wysiwyg/footer-payment.png"}}" /></p>
+<p>New York, USA – 1060 Firs Avenue, Muswell Hill</p>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Instagram]]></title>
+      <identifier><![CDATA[instagram]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Instagram\Block\Widget\Instagram" title="@Instagram" numberimage="6"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Shop by Categories for Home 2]]></title>
+      <identifier><![CDATA[shop_by_categories]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="Shop by Categories" color_box="red-box" identify="featured_categories" category_id="4,7,44,6" slide_row="1" slide_limit="6" template="categorytab/catthumbnail.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[8]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Middle]]></title>
+      <identifier><![CDATA[banner_middle]]></identifier>
+      <content><![CDATA[<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12 col-banner-top padding-right-0">
+<div class="banner-top banner-top1">
+<div class="bs-banner"><a href="#"><img src="{{media url="wysiwyg/banner21.jpg"}}" /></a></div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12 col-banner-top padding-left-0">
+<div class="banner-top banner-top2">
+<div class="bs-banner"><a href="#"><img src="{{media url="wysiwyg/banner22.jpg"}}" /></a></div>
+</div>
+</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner middle 2 for home 2]]></title>
+      <identifier><![CDATA[banner_middle2]]></identifier>
+      <content><![CDATA[<div class="col-xs-12 col-md-6 col-left">
+<h4>Mega Sale - up to 20% off</h4>
+<h2>Organic Fruit</h2>
+<p>When you see those huge, tumbling, beautifully-flowering hanging baskets in open gardens, outside pubs or...</p>
+<a class="view-more"> Shop Now </a></div>
+<div class="col-xs-12 col-md-6 col-right"><img src="{{media url="wysiwyg/banner31.png"}}" alt="" /></div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner middle 3]]></title>
+      <identifier><![CDATA[banner_middle3]]></identifier>
+      <content><![CDATA[<div class="banner-top banner-top1">
+<div class="bs-banner"><a href="#"><img src="{{media url="wysiwyg/banner331.jpg"}}" alt="" /></a></div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Featured Home 3]]></title>
+      <identifier><![CDATA[banner_featured]]></identifier>
+      <content><![CDATA[<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12 col-banner-top">
+<div class="banner-top banner-top1">
+<div class="bs-banner"><a href="#"><img src="{{media url="wysiwyg/banner41.jpg"}}" alt="" /></a></div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12 col-banner-top">
+<div class="banner-top banner-top2">
+<div class="bs-banner"><a href="#"><img src="{{media url="wysiwyg/banner42.jpg"}}" alt="" /></a></div>
+</div>
+</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Hotline]]></title>
+      <identifier><![CDATA[hotline]]></identifier>
+      <content><![CDATA[<p><a href="tel:1238800555"> <i class="lnr lnr-phone-handset"> </i>(123) 8800-555</a></p>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Main navigation]]></title>
+      <identifier><![CDATA[main-nav]]></identifier>
+      <content><![CDATA[<div><nav class="main-nav">
+<ul>
+<li class="ui-menu-item level0"><a class="level-top" href="#"><span>Home</span></a></li>
+<li class="ui-menu-item level0 menu-item-has-children">
+<div class="open-children-toggle"></div>
+<a class="level-top" href="#"><span>Features</span></a>
+<ul class="sub-menu">
+<li class="ui-menu-item menu-item-has-children level1">
+<div class="open-children-toggle"></div>
+<a href="javascript:void(0)">Product Types</a>
+<ul class="sub-menu">
+<li class="level2"><a href="{{store url=''}}hollister-backyard-sweatshirt-10.html">Simple Product</a></li>
+<li class="level2"><a href="{{store url=''}}bag-goodscol-model.html">Grouped Product</a></li>
+<li class="level2"><a href="{{store url=''}}burberry-pink.html">Configurable Product</a></li>
+<li class="level2"><a href="{{store url=''}}women-s-woolen.html">Bundle Product</a></li>
+<li class="level2"><a href="{{store url=''}}stretch-dining-chair.html">Downloadable Product</a></li>
+</ul>
+</li>
+<li class="ui-menu-item menu-item-has-children level1">
+<div class="open-children-toggle"></div>
+<a href="javascript:void(0)">Product Features</a>
+<ul class="sub-menu">
+<li class="level2"><a href="{{store url=''}}hollister-backyard-sweatshirt-14.html">Product with Related</a></li>
+<li class="level2"><a href="{{store url=''}}hollister-backyard-sweatshirt-7.html">Product with Upsell</a></li>
+<li class="level2"><a href="{{store url=''}}hollister-backyard-sweatshirt-10.html">Product with Video</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="ui-menu-item level0"><a class="level-top" href="{{store url='blog'}}"> <span>Blog</span> </a></li>
+<li class="ui-menu-item level0 menu-item-has-children">
+<div class="open-children-toggle"></div>
+<a class="level-top" href="javascript:void(0)"> <span>Pages</span> </a>
+<ul class="sub-menu">
+<li class="ui-menu-item level1 "><a href="{{store url='rokanthemes-brand.html'}}"> Brands </a></li>
+<li class="ui-menu-item level1 "><a href="{{store url='about-us'}}"> <span>About Us</span> </a></li>
+<li class="ui-menu-item level1 "><a href="{{store url='privacy-policy-cookie-restriction-mode'}}"> <span>Privacy Policy</span> </a></li>
+<li class="ui-menu-item level1 "><a href="{{store url='no-route'}}"> <span>404 Not Found</span> </a></li>
+</ul>
+</li>
+<li class="ui-menu-item level0"><a class="level-top" href="{{store url='contact'}}"> <span>Contact Us</span> </a></li>
+</ul>
+</nav></div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Top Right]]></title>
+      <identifier><![CDATA[banner_top_right]]></identifier>
+      <content><![CDATA[<div class="banner-top banner-top1">
+<div class="bs-banner"><a href="#"> <img src="{{media url="wysiwyg/banner-right411.jpg"}}" alt="" /> </a></div>
+</div>
+<div class="banner-top banner-top2">
+<div class="bs-banner"><a href="#"> <img src="{{media url="wysiwyg/banner-right412.jpg"}}" alt="" /> </a></div>
+</div>
+<div class="banner-top banner-top3">
+<div class="bs-banner"><a href="#"> <img src="{{media url="wysiwyg/banner-right413.jpg"}}" alt="" /> </a></div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner middle Home 4]]></title>
+      <identifier><![CDATA[banner_middle_h4]]></identifier>
+      <content><![CDATA[<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12 col-banner-top">
+<div class="banner-top banner-top1">
+<div class="bs-banner"><a href="#"><img src="{{media url="wysiwyg/banner421.jpg"}}" /></a></div>
+</div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12 col-banner-top">
+<div class="banner-top banner-top2">
+<div class="bs-banner"><a href="#"><img src="{{media url="wysiwyg/banner422.jpg"}}" /></a></div>
+</div>
+</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Our Stories home 4]]></title>
+      <identifier><![CDATA[our_stories_h4]]></identifier>
+      <content><![CDATA[<div class="img_intro"><img src="{{media url="wysiwyg/stories.jpg"}}" alt="" /></div>
+<div class="stories_content">
+<h2>Our Stories</h2><p>We've recently updated our entire product portfolio to give customers and partners the best products with the newest technology. </p><a class="btn" href="#">Read More</a></div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Free Shipping]]></title>
+      <identifier><![CDATA[free_shipping]]></identifier>
+      <content><![CDATA[<div>Free Shipping on Orders $100</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Hotline Email]]></title>
+      <identifier><![CDATA[hotline_email]]></identifier>
+      <content><![CDATA[<div class="hotline-email">
+<div class="telephone"> (+800) 123 456 7890 </div>
+<div class="email"> contact@support.vcom </div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Block Top]]></title>
+      <identifier><![CDATA[banner_block_top]]></identifier>
+      <content><![CDATA[<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-4">
+<div class="row">
+<div class="col-xs-6 col-md-12">
+<div class="velaBlock bs_banner"><a class="banner_hover" href="#"><img src="{{media url="wysiwyg/banner_mid_1.jpg"}}" alt=""></a></div>
+</div>
+<div class="col-xs-6 col-md-12">
+<div class="velaBlock bs_banner"><a class="banner_hover" href="#"><img src="{{media url="wysiwyg/banner_mid_2.jpg"}}" alt=""></a></div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-md-4">
+<div class="velaBlock bs_banner"><a class="banner_hover" href="#"><img src="{{media url="wysiwyg/banner_mid_3.jpg"}}" alt=""></a></div>
+</div>
+<div class="col-xs-12 col-md-4">
+<div class="row">
+<div class="col-xs-6 col-md-12">
+<div class="velaBlock bs_banner"><a class="banner_hover" href="#"><img src="{{media url="wysiwyg/banner_mid_4.jpg"}}" alt=""></a></div>
+</div>
+<div class="col-xs-6 col-md-12">
+<div class="velaBlock bs_banner"><a class="banner_hover" href="#"><img src="{{media url="wysiwyg/banner_mid_5.jpg"}}" alt=""></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Categories Tab Home1]]></title>
+      <identifier><![CDATA[categories_tab_home1]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="New arrivals products" description="Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. " color_box="red-box" identify="categories_tab" category_id="3,4,6,7,44" limit_qty="60" show_pager="0" slide_row="2" slide_limit="4" template="categorytab/grid.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Mid Home1]]></title>
+      <identifier><![CDATA[banner_mid_home1]]></identifier>
+      <content><![CDATA[<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_bottom_1.jpg&quot;}}" alt="" /></a></div>
+<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_bottom_2.jpg&quot;}}" alt="" /></a></div>
+]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Newtester Social]]></title>
+      <identifier><![CDATA[newtester_social]]></identifier>
+      <content><![CDATA[<ul class="newtester-social">
+<li><a title="Instagram" href="#"><span class="fa fa-instagram">instagram</span></a></li>
+<li><a title="Twitter" href="#"><span class="fa fa-twitter">twitter</span></a></li>
+<li><a title="Face-book" href="#"><span class="fa fa-facebook">facebook</span></a></li>
+<li><a title="Face-book" href="#"><span class="fa fa-youtube">youtube</span></a></li>
+<li><a title="Dribbble" href="#"><span class="fa fa-dribbble">dribbble</span></a></li>
+</ul>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Footer Right]]></title>
+      <identifier><![CDATA[footer_right]]></identifier>
+      <content><![CDATA[<div class="vela-contactinfo velaBlock">
+<div class="vela-content">
+<div class="contacinfo-phone contactinfo-item clearfix">
+<div class="d-flex"><img src="{{media url="wysiwyg/logo_footer.png"}}" alt="">
+<div class="wrap"><label>Got Question? Call us 24/7!</label>
+<div class="hotline">(+123) 666 888 789</div>
+<div class="contacinfo-address contactinfo-item "><label>Address: </label>7563 St. Vicent Place, Glasgow, Greater NewYork NH7689, UK</div>
+<div class="contacinfo-email contactinfo-item "><label>Email:</label>contact@support.com</div>
+</div>
+</div>
+</div>
+<div class="logo_payment"><img src="{{media url="wysiwyg/footer_payment.png"}}" alt=""></div>
+</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Footer Link Menu]]></title>
+      <identifier><![CDATA[footer_link_menu]]></identifier>
+      <content><![CDATA[<ul>
+<li><a title="Site Map" href="#" target="_self"> Site Map </a></li>
+<li><a title="Careers" href="#"> Careers</a></li>
+<li><a title="Privacy Policy" href="#">Privacy Policy</a></li>
+<li><a title="Terms of Use" href="#">Terms of Use</a></li>
+</ul>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Middle Home 2]]></title>
+      <identifier><![CDATA[banner_middle_home2]]></identifier>
+      <content><![CDATA[<div class="banner_mid_h1">
+		<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_mid1_h2.jpg&quot;}}" alt="" /></a></div>
+<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_mid2_h2.jpg&quot;}}" alt="" /></a></div>
+<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_mid3_h2.jpg&quot;}}" alt="" /></a></div>
+	</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Middle Left]]></title>
+      <identifier><![CDATA[banner_middle_left]]></identifier>
+      <content><![CDATA[<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_6.jpg&quot;}}" alt="" /></a></div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Block Friendly ]]></title>
+      <identifier><![CDATA[block_friendly ]]></identifier>
+      <content><![CDATA[<div class="img_friendly">
+<img src="{{media url=&quot;wysiwyg/background_block.jpg&quot;}}" alt="" />
+<div class="banner-home2">
+	<h3>A friendly organic store</h3>
+	<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. </p>
+	<div class="content">
+		<div class="input_1">
+			100% Healthy & Organic
+		</div>
+		<div class="input_1">
+			Skilled & Loving Farmers
+		</div>
+		<div class="input_1">
+			Totally Organic Livestock
+		</div>
+		<div class="input_1">
+			Best Farming Equipment
+		</div>
+		<div class="input_1">
+			No Pesticides Ever
+		</div>
+		<div class="input_1">
+			Fast & Flexible Deliveries
+		</div>
+	</div>
+</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Bestselling Product Cmsblock]]></title>
+      <identifier><![CDATA[bestselling_product_cms_block]]></identifier>
+      <content><![CDATA[<div class="rokan-product-heading rokan-onsale-heading">
+<h2>Best selling products</h2>
+<p class="description">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+</div>
+<div class="best_selling_block">
+<div class="product_block">
+<div class="bs_banner"><a class="banner_hover"><img src="{{media url="wysiwyg/banner_1_h3.jpg"}}" alt=""></a></div>
+<div class="product_info">
+<div class="name_product">Organic Green Pears</div>
+<div class="price_product">$60.00</div>
+</div>
+</div>
+<div class="product_block">
+<div class="bs_banner"><a class="banner_hover"><img src="{{media url="wysiwyg/banner_2_h3.jpg"}}" alt=""></a></div>
+<div class="product_info">
+<div class="name_product">Organic Green Pears</div>
+<div class="price_product">$60.00</div>
+</div>
+</div>
+<div class="product_block">
+<div class="bs_banner"><a class="banner_hover"><img src="{{media url="wysiwyg/banner_3_h3.jpg"}}" alt=""></a></div>
+<div class="product_info">
+<div class="name_product">Organic Green Pears</div>
+<div class="price_product">$60.00</div>
+</div>
+</div>
+<div class="product_block">
+<div class="bs_banner"><a class="banner_hover"><img src="{{media url="wysiwyg/banner_4_h3.jpg"}}" alt=""></a></div>
+<div class="product_info">
+<div class="name_product">Organic Green Pears</div>
+<div class="price_product">$60.00</div>
+</div>
+</div>
+<div class="product_block">
+<div class="bs_banner"><a class="banner_hover"><img src="{{media url="wysiwyg/banner_5_h3.jpg"}}" alt=""></a></div>
+<div class="product_info">
+<div class="name_product">Organic Green Pears</div>
+<div class="price_product">$60.00</div>
+</div>
+</div>
+<div class="product_block">
+<div class="bs_banner"><a class="banner_hover"><img src="{{media url="wysiwyg/banner_6_h3.jpg"}}" alt=""></a></div>
+<div class="product_info">
+<div class="name_product">Organic Green Pears</div>
+<div class="price_product">$60.00</div>
+</div>
+</div>
+<div class="product_block">
+<div class="bs_banner"><a class="banner_hover"><img src="{{media url="wysiwyg/banner_7_h3.jpg"}}" alt=""></a></div>
+<div class="product_info">
+<div class="name_product">Organic Green Pears</div>
+<div class="price_product">$60.00</div>
+</div>
+</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Wellcome Home4]]></title>
+      <identifier><![CDATA[wellcome_home4]]></identifier>
+      <content><![CDATA[<div class="banner_home4">
+<div class="container">
+<h3>Welcome to ecofarm</h3>
+<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+<div class="icon_h4"><img src="{{media url="wysiwyg/bg_icon_h4.png"}}" alt=""></div>
+<div class="nameproduct_h4">At Ecofarm, we believe in filling foodswith the goodness of healthy &amp; thejoy of happy.</div>
+<div class="description">Etiam vitae bibend eros praesent a quet, maximus dignissim imperdiet, tellus luctus massa augue erat. Fusce egestas mi et lorem ornareEtiam vitae bibend eros praesent a quet, maximus dignissim imperdiet, tellus luctus massa augue erat.</div>
+<a class="learn-more">Learn More</a></div>
+</div>
+ <img src="{{media url="wysiwyg/bg_banner_h4.png"}}" alt=""> 
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[List Ads5]]></title>
+      <identifier><![CDATA[list_ads5]]></identifier>
+      <content><![CDATA[<div class="list-ads1">
+<div class="row">
+<div class="col-xs-12">
+<div class="popcat-box bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_1_h5.jpg&quot;}}" alt="" /></a></div>								</div>
+<div class="col-xs-12">
+<div class="popcat-box bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_2_h5.jpg&quot;}}" alt="" /></a></div>								</div>
+</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Categories Tab2 Home5]]></title>
+      <identifier><![CDATA[categories_tab_2_home5]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="New arrivals products" description="Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. " color_box="red-box" identify="categories_tab2" category_id="44" limit_qty="60" show_pager="0" slide_row="1" slide_limit="5" template="categorytab/grid-original.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Categories Tab1 Home5]]></title>
+      <identifier><![CDATA[categories_tab_1_home5]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="Bestselling products" description="Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. " color_box="red-box" identify="categories_tab" category_id="3" limit_qty="60" show_pager="0" slide_row="1" slide_limit="5" template="categorytab/grid.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Top Home5]]></title>
+      <identifier><![CDATA[banner_top_home5]]></identifier>
+      <content><![CDATA[<div class="banner_mid_h1">
+		<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_3_h5.jpg&quot;}}" alt="" /></a></div>
+<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_4_h5.jpg&quot;}}" alt="" /></a></div>
+	</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Middle Home5]]></title>
+      <identifier><![CDATA[banner_middle_home5]]></identifier>
+      <content><![CDATA[<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+			<div class="bs_banner">
+				<a class="banner_hover" href="#">
+					<img src="{{media url=&quot;wysiwyg/banner_5_h5.jpg&quot;}}" alt="" />
+				</a>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<div class="bs_banner">
+				<a class="banner_hover" href="#">
+					<img src="{{media url=&quot;wysiwyg/banner_6_h5.jpg&quot;}}" alt="" />
+				</a>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<div class="bs_banner">
+				<a class="banner_hover" href="#">
+					<img src="{{media url=&quot;wysiwyg/banner_7_h5.jpg&quot;}}" alt="" />
+				</a>
+			</div>
+		</div>
+	</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Bottom Home6]]></title>
+      <identifier><![CDATA[banner_bottom_home6]]></identifier>
+      <content><![CDATA[<div class="banner_mid_h1">
+	<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner_bottom_h6.jpg&quot;}}" alt="" /></a></div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Youtube Home6]]></title>
+      <identifier><![CDATA[youtube_home6]]></identifier>
+      <content><![CDATA[<div><iframe style="display: block; margin-left: auto; margin-right: auto;" src="https://www.youtube.com/embed/bmpzv64VKtk?autoplay=1" width="100%" height="704" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Categories Tab Home7]]></title>
+      <identifier><![CDATA[categories_tab_home7]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="New arrivals products" description="Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. " color_box="red-box" identify="categories_tab" category_id="6,7,44" limit_qty="60" show_pager="0" slide_row="2" slide_limit="4" template="categorytab/grid.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner Middles Home7]]></title>
+      <identifier><![CDATA[banner_middles_home7]]></identifier>
+      <content><![CDATA[<div class="bs_banner"><a class="banner_hover" href="#"><img src="{{media url=&quot;wysiwyg/banner1_h7.jpg&quot;}}" alt="" /></a></div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Block Home7]]></title>
+      <identifier><![CDATA[block_home7]]></identifier>
+      <content><![CDATA[<div class="list-ads7">
+	<div class="velaServicesInner">
+		<div class="boxService">
+			<div class="boxServiceImage">
+				<i class="pe-7s-car">1</i>
+			</div>
+			<div class="boxServiceContent">
+				<div class="boxServiceTitle">
+					Free Delivery
+				</div>
+				<div class="boxServiceDesc">
+					orders over $99.00
+				</div>
+			</div>
+		</div>
+		<div class="boxService">
+			<div class="boxServiceImage">
+				<i class="pe-7s-piggy">2</i>
+			</div>
+			<div class="boxServiceContent">
+				<div class="boxServiceTitle">
+					Money Guarantee
+				</div>
+				<div class="boxServiceDesc">
+					7 days back
+				</div>
+			</div>
+		</div>
+		<div class="boxService">
+			<div class="boxServiceImage">
+				<i class="pe-7s-refresh-2">3</i>
+			</div>
+			<div class="boxServiceContent">
+				<div class="boxServiceTitle">
+					365 Days
+				</div>
+				<div class="boxServiceDesc">
+					for free return
+				</div>
+			</div>
+		</div>
+		<div class="boxService">
+			<div class="boxServiceImage">
+				<i class="pe-7s-credit">4</i>
+			</div>
+			<div class="boxServiceContent">
+				<div class="boxServiceTitle">
+					Payment
+				</div>
+				<div class="boxServiceDesc">
+					secure system
+				</div>
+			</div>
+		</div>
+		<div class="boxService">
+			<div class="boxServiceImage">
+				<i class="pe-7s-headphones">5</i>
+			</div>
+			<div class="boxServiceContent">
+				<div class="boxServiceTitle">
+					Online Support
+				</div>
+				<div class="boxServiceDesc">
+					24/24h on day
+				</div>
+			</div>
+		</div>
+	</div>
+</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Categories Tab Home8]]></title>
+      <identifier><![CDATA[categories_tab_home8]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="New arrivals products" description="Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat. " color_box="red-box" identify="categories_tab" category_id="6,7,44" limit_qty="60" show_pager="0" slide_row="1" slide_limit="4" template="categorytab/grid.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner cat4 Home8]]></title>
+      <identifier><![CDATA[banner_cat4_home8]]></identifier>
+      <content><![CDATA[<div class="bs_banner">
+				<a class="banner_hover" href="#">
+					<img src="{{media url=&quot;wysiwyg/banner4_h8.jpg&quot;}}" alt="" />
+				</a>
+			</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner cat3 Home8]]></title>
+      <identifier><![CDATA[banner_cat3_home8]]></identifier>
+      <content><![CDATA[<div class="bs_banner">
+				<a class="banner_hover" href="#">
+					<img src="{{media url=&quot;wysiwyg/banner3_h8.jpg&quot;}}" alt="" />
+				</a>
+			</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner cat2 Home8]]></title>
+      <identifier><![CDATA[banner_cat2_home8]]></identifier>
+      <content><![CDATA[<div class="bs_banner">
+				<a class="banner_hover" href="#">
+					<img src="{{media url=&quot;wysiwyg/banner2_h8.jpg&quot;}}" alt="" />
+				</a>
+			</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[Banner cat1 Home8]]></title>
+      <identifier><![CDATA[banner_cat1_home8]]></identifier>
+      <content><![CDATA[<div class="bs_banner">
+				<a class="banner_hover" href="#">
+					<img src="{{media url=&quot;wysiwyg/banner1_h8.jpg&quot;}}" alt="" />
+				</a>
+			</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[CategoriesTab1 Home8]]></title>
+      <identifier><![CDATA[categories_tab_1_home8]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="Nuts &amp; Seeds" banner_home_category="banner_cat1_home8" color_box="red-box" identify="nuts-seeds" category_id="63" limit_qty="60" show_pager="0" slide_row="1" slide_limit="4" template="categorytab/grid-original.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[CategoriesTab2 Home8]]></title>
+      <identifier><![CDATA[categories_tab_2_home8]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="Cereals & Muesli" banner_home_category="banner_cat2_home8" color_box="red-box" identify="cereals-muesli" category_id="64" limit_qty="60" show_pager="0" slide_row="1" slide_limit="4" template="categorytab/grid-original.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[CategoriesTab3 Home8]]></title>
+      <identifier><![CDATA[categories_tab_3_home8]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="Oil & Vinegars" banner_home_category="banner_cat3_home8" color_box="red-box" identify="oil-vinegars" category_id="66" limit_qty="60" show_pager="0" slide_row="1" slide_limit="4" template="categorytab/grid-original.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+    <item>
+      <title><![CDATA[CategoriesTab4 Home8]]></title>
+      <identifier><![CDATA[categories_tab_4_home8]]></identifier>
+      <content><![CDATA[<div>{{widget type="Rokanthemes\Categorytab\Block\CateWidget" title="Dressing & Sauces" banner_home_category="banner_cat4_home8" color_box="red-box" identify="dressing-sauces" category_id="67" limit_qty="60" show_pager="0" slide_row="1" slide_limit="4" template="categorytab/grid-original.phtml"}}</div>]]></content>
+      <is_active><![CDATA[1]]></is_active>
+      <store_id>
+        <id><![CDATA[0]]></id>
+      </store_id>
+    </item>
+  </blocks>
+</root>

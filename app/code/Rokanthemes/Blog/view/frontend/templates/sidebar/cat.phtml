@@ -1,0 +1,123 @@
+<?php
+/**
+ * Copyright © 2015 RokanThemes.com. All rights reserved.
+
+ * @author RokanThemes Team <contact@rokanthemes.com>
+ */
+?>
+<?php
+/**
+ * Blog sidebar recent posts template
+ *
+ * @var $block \Rokanthemes\Blog\Block\Sidebar\Recent
+ */
+?>
+
+<?php
+	$enable = $this->getConfig('enable_frontend');
+	$auto = $this->getConfig('auto');
+	$speed = $this->getConfig('speed');
+	$default = $this->getConfig('default');
+	$desktop = $this->getConfig('desktop');
+	$desktop_small = $this->getConfig('desktop_small');
+	$tablet = $this->getConfig('tablet');
+	$mobile = $this->getConfig('mobile');
+	$pagination = $this->getConfig('pagination');
+	$show_next_back = $this->getConfig('show_next_back');
+	$show_navigation_control = $this->getConfig('show_navigation_control');
+	$title = $this->getConfig('title');
+	$description = $this->getConfig('blog_description');
+	if($show_next_back)
+		$show_next_back = 'true';
+	else
+		$show_next_back = 'false';
+	$show_navigation_control = $this->getConfig('show_navigation_control');
+	if($show_navigation_control)
+		$show_navigation_control = 'true';
+	else
+		$show_navigation_control = 'false';
+	$_postCollection = $block->getPostCollection();
+?>
+
+<section class="widget box-section block-recent-posts" data-bind="scope: 'recemt-posts'">
+	<div class="container"> 
+		<!--<div class="rokan-product-heading rokan-onsale-heading">-->
+		<!--	<h2>'Show' Sweet of You</h2>-->
+		<!--</div>-->
+		
+		<div class="owl-container">
+			<div class="block-content">
+			    <ul class="tabs tabs-categories_tab">
+				<div class="owl">
+				
+						<div class="item">
+						    <li>
+							<a href="http://fairpricecorner.com/">
+                            <img class="categories-thumb-icon" src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>01_1.jpg" alt="Bakery"><h3 class="cnt">Sweets</h3> </a>
+                            </li>
+						</div>
+						<div class="item">
+						    <li>
+							<a href="http://fairpricecorner.com/">
+                            <img class="categories-thumb-icon" src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>02_1.jpg" alt="Bakery"><h3 class="cnt">Sweets</h3> </a>
+                            </li>
+						</div>
+						<div class="item">
+						    <li>
+							<a href="http://fairpricecorner.com/">
+                            <img class="categories-thumb-icon" src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>03_1.jpg" alt="Bakery"><h3 class="cnt">Sweets</h3> </a>
+                            </li>
+						</div>
+						
+						<div class="item">
+							<li>
+							<a href="http://fairpricecorner.com/">
+                            <img class="categories-thumb-icon" src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>04_1.jpg" alt="Bakery"><h3 class="cnt">Sweets</h3> </a>
+                            </li>
+						</div>
+						<div class="item">
+						    <li>
+							<a href="http://fairpricecorner.com/">
+                            <img class="categories-thumb-icon" src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>01_1.jpg" alt="Bakery"><h3 class="cnt">Sweets</h3> </a>
+                            </li>
+							
+						</div>
+						<div class="item">
+							<li>
+							<a href="http://fairpricecorner.com/">
+                            <img class="categories-thumb-icon" src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>02_1.jpg" alt="Bakery"><h3 class="cnt">Sweets</h3> </a>
+                            </li>
+						</div>
+				
+				</div>
+				</ul>
+			</div>
+		</div>
+    </div>
+</section>
+
+<script type="text/javascript">
+	require([
+		'jquery',
+		'mage/mage',
+		'rokanthemes/owl'
+	], function ($) {
+		'use strict';
+
+		jQuery(".block-recent-posts .owl").owlCarousel({
+			items : 4,
+			itemsDesktop : [1199,<?php echo $desktop; ?>],
+			itemsDesktopSmall : [980,<?php echo $desktop_small; ?>],
+			itemsTablet: [768,<?php echo $tablet; ?>],
+			itemsMobile : [479,<?php echo $mobile; ?>],
+			slideSpeed : <?php echo $pagination; ?>,
+			paginationSpeed : <?php echo $pagination; ?>,
+			rewindSpeed : <?php echo $pagination; ?>,
+			addClassActive: true,
+			navigation : <?php echo $show_next_back; ?>,
+			stopOnHover : true,
+			pagination : <?php echo $show_navigation_control; ?>,
+			scrollPerPage:true,
+		});
+	});
+</script>

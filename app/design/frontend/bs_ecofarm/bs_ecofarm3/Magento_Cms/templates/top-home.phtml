@@ -1,0 +1,77 @@
+<div class="top-content-home">
+    
+	<div class="sweetofyou">
+		<div class="containers">
+			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('magiccart')->toHtml(); ?>
+		</div>
+	</div>
+	
+	<div class="besseller_product">
+		<div class="containers">
+			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('bestselling_product_cms_block')->toHtml(); ?>
+		</div>
+	</div>
+	
+	<div class="food_court">	
+		<div class="containers">
+			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('food_court_gift_launge')->toHtml(); ?>
+		</div>
+	</div>
+	
+	<div class="experience">	
+		<div class="containers">
+			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('experience_maakhan_bhog')->toHtml(); ?>
+		</div>
+	</div>
+	
+	<div class="section-element categories_tab">
+		<div class="container">
+			<div  class="row">
+				<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('categories_tab_home1')->toHtml();?>
+			</div>
+		</div>
+	</div>
+	
+	<div class="section-element section_testimonial">
+    	<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('titel_img')->toHtml();?>
+    	<div class="container">
+    		<?php echo $block->getLayout()->createBlock('Rokanthemes\Testimonial\Block\Testimonial')->setTemplate('Rokanthemes_Testimonial::testimonial.phtml')->toHtml();?>
+		</div>
+	</div>
+	
+	<div class="about_maakhanbhog">	
+		<div class="containers">
+			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('about_maakhan_bhog')->toHtml(); ?>
+		</div>
+	</div>
+	
+	<!--<div class="hot-deal">-->
+	<!--	<div class="container">-->
+	<!--		<?/** php echo $block->getLayout()->createBlock('Rokanthemes\Superdeals\Block\ProductByCat')->setTemplate('Rokanthemes_Superdeals::category.phtml')->toHtml(); **/ ?>-->
+	<!--	</div>-->
+	<!--</div>-->
+	<!--<div class="banner_mid_h1">-->
+	<!--	<?/**php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner_mid_home1')->toHtml();**/?>-->
+	<!--</div>	-->
+    <!--   <div class="sweetofyou">-->
+	<!--	<div class="containers">-->
+	<!--		<?php /** echo $block->getLayout()->createBlock('Rokanthemes\Blog\Block\Sidebar\Recent')->setTemplate('Rokanthemes_Blog::sidebar/cat.phtml')->toHtml(); **/?>-->
+	<!--	</div>-->
+	<!--</div>-->
+	
+	
+	
+
+	<!--<div class="section-element box-blog">-->
+	<!--	<div class="container">-->
+	<!--		<?/**php echo $block->getLayout()->createBlock('Rokanthemes\Blog\Block\Sidebar\Recent')->setTemplate('Rokanthemes_Blog::sidebar/slider.phtml')->toHtml();**/?>-->
+	<!--	</div>-->
+	<!--</div>-->
+
+	<!--<div class="section-element section-brands">-->
+	<!--	<div class="container">-->
+	<!--		<?/**php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('brand-logo')->toHtml(); **/?>-->
+	<!--	</div>-->
+	<!--</div>-->
+
+</div>

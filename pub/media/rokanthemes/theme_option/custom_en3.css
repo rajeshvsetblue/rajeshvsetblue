@@ -1,0 +1,12 @@
+/**
+ * custom theme 2021-04-15 06:30:36 */
+
+#newsletter_pop_up{
+width: 850px;height: 400px;background-color: #FFFFFF;background-repeat: no-repeat;
+background-position: 15px;
+background-size: contain;}
+#newsletter_pop_up .col-img{
+	height: 100%;
+	background-image: url(http://fairpricecorner.com/pub/media/rokanthemes/newsletter/background/default/bg_newsletter.png);background-repeat: no-repeat;
+background-position: 15px;
+background-size: contain;}

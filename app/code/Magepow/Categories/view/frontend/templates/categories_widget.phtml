@@ -1,0 +1,101 @@
+<?php
+/*
+ * @category: Magepow
+ * @copyright: Copyright (c) 2014 Magepow (http://www.magepow.com/)
+ * @licence: http://www.magepow.com/license-agreement
+ * @author: MichaelHa
+ * @create date: 2019-11-29 17:19:50
+ * @LastEditors: MichaelHa
+ * @LastEditTime: 2019-12-04 11:07:49
+ */
+?>
+<?php
+/**
+ * Categories block
+ *
+ * @var $block \Magepow\Categories\Block\Categories
+ */
+
+$categories       = $block->getCategories();
+$layout           = $block->getLayout();
+$heading          = $block->getHeading();
+$description      = $block->isShowDescription();
+
+?>
+<?php if (empty($categories)) return ?>
+<?php if ($heading): ?>
+    <h3 class="magepow-categories-heading"><?php echo $heading ?></h3>
+<?php endif; ?>
+<section class="widget box-section block-recent-posts" data-bind="scope: 'recemt-posts'">
+    <div class="container"> 
+		<!--<div class="rokan-product-heading rokan-onsale-heading">-->
+		<!--	<h2>'Show' Sweet of You</h2>-->
+		<!--</div>-->
+        <div class="owl-container">
+        	<div class="block-content">
+        		
+		    
+<!--<ul class="magepow-categories-<?/**php echo $layout **/ ?>">-->
+ <ul class="tabs tabs-categories_tab">
+    
+    <div class="owl">
+    <?php foreach ($categories as $cat): ?>
+      <div class="item">
+        <!--<li class="magepow-categories-category-wrapper item">-->
+        <!--    <a class="magepow-categories-category" href="<?/**php echo $cat->getUrl() ?>">-->
+        <!--        <div class="magepow-categories-category-image">-->
+        <!--            <img src="</**?php echo $this->getImage($cat) ?>" alt="<?/**php echo $cat->getName() ?>"/>-->
+        <!--        </div>-->
+        <!--        <div class="magepow-categories-category-name">-->
+        <!--            <span><?/**php echo $cat->getName() ?></span>-->
+        <!--        </div>-->
+        <!--    </a>-->
+        <!--    <?/**php if($description):**/ ?>-->
+        <!--        <div class="magepow-categories-category-description">-->
+        <!--            <?/**php echo $this->getDescription($cat) ?>-->
+        <!--        </div>-->
+        <!--    <?/**php endif; **/?>-->
+        <!--</li>-->
+        
+        
+        <li>
+			<a href="<?php echo $cat->getUrl() ?>">
+            <img class="categories-thumb-icon" src="<?php echo $this->getImage($cat) ?>" alt="<?php echo $cat->getName() ?>"><h3 class="cnt"><?php echo $cat->getName() ?></h3> </a>
+        </li>
+      </div>
+    <?php endforeach; ?>
+    </div>
+</ul>
+
+
+</div>
+</div>
+</div>
+</section>
+
+
+<script type="text/javascript">
+	require([
+		'jquery',
+		'mage/mage',
+		'rokanthemes/owl'
+	], function ($) {
+		'use strict';
+
+		jQuery(".block-recent-posts .owl").owlCarousel({
+			items : 4,
+			itemsDesktop : [1199,3],
+			itemsDesktopSmall : [980,3],
+			itemsTablet: [768,2],
+			itemsMobile : [479,1],
+			slideSpeed : 500,
+			paginationSpeed : 500,
+			rewindSpeed : 500,
+			addClassActive: true,
+			navigation : true,
+			stopOnHover : true,
+			pagination : false,
+			scrollPerPage:true,
+		});
+	});
+	</script>
