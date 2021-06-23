@@ -69,10 +69,10 @@ $_helper = $this->helper('Magento\Catalog\Helper\Output');
 											<?php echo $productImageThumb->toHtml(); ?>
 										</span>
 								</a>
-								<div class="quickview-product visible-onhover">
-									<a href="javascript:void(0)" data-role="quickview-button" data-id="<?php echo $_product->getId(); ?>" data-href="<?php echo $block->getUrl('quickview/product/quickview/id/' . $_product->getId()) ?>" title="<?php echo $block->escapeHtml(__('Quick view')); ?>" class="ajax diamond tooltip-hover" data-placement="top" data-original-title="<?php echo ('Quick view') ?>">	<i class="lnr lnr-move"></i>
-									</a>
-							    </div>
+								<!--<div class="quickview-product visible-onhover">-->
+								<!--	<a href="javascript:void(0)" data-role="quickview-button" data-id="<?php /** echo $_product->getId(); ?>" data-href="<?php echo $block->getUrl('quickview/product/quickview/id/' . $_product->getId()) ?>" title="<?php echo $block->escapeHtml(__('Quick view')); ?>" class="ajax diamond tooltip-hover" data-placement="top" data-original-title="<?php echo ('Quick view') **/ ?>">	<i class="lnr lnr-move"></i>-->
+								<!--	</a>-->
+							 <!--   </div>-->
 								<div class="product-label">
 									<?php if ( $_product->getFinalPrice() < $_product->getPrice() ): ?>
 										<span class="onsale">

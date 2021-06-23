@@ -1,0 +1,188 @@
+<?php $helper = $block->googleMapsStoreHelper;
+ $markerImage = $helper->getGMapMarkerImage();   
+$currentStores = $block->getStoreDetail();
+
+    if(!$markerImage):
+         $markerImg = $block->getViewFileUrl('FME_StorePickup::images/marker.png');
+      else:
+         $markerImg = $mediaUrl.$markerImage;
+         $markerImg = $helper->resize($markerImage,55,55);    
+      endif;
+
+ 
+    $Stores = $currentStores;
+    $currentStores = $currentStores;
+    $standard_lat = $helper->getGMapStandardLatitude();
+    $standard_long = $helper->getGMapStandardLongitude();
+    $standard_zoom = $helper->getGMapZoom(); ?>
+<script>   
+    markerImg = '<?php echo $markerImg; ?>';
+    distUnit = 'km';  
+    var map = null;
+    var circle = null;
+    var gmarkers = '';
+    function initMap(sel) {
+      
+      directionsDisplay = new google.maps.DirectionsRenderer();
+            myData = '';        
+            var locations, i,j;
+            var locations = <?php echo json_encode($Stores->getData()) ?>; 
+            var lat = <?php echo $currentStores->getLatitude() ?>;
+            var lng = <?php echo $currentStores->getLongitude() ?>;             
+            var uluru = {lat: eval(lat),lng: eval(lng) };
+             map = new google.maps.Map(document.getElementById('map_canvas'), {
+                zoom: 14,
+                mapTypeIds: google.maps.MapTypeId.ROADMAP,
+                center: new google.maps.LatLng(uluru)                
+            });
+               directionsDisplay.setMap(map);
+
+            var locations, i;
+            var contentString = new Array("");      
+            gmarkers = [];
+   
+            var infowindow = new google.maps.InfoWindow();
+            i = 0;
+          marker = new google.maps.Marker({
+              position: new google.maps.LatLng(locations['latitude'], locations['longitude']),
+              map: map,
+              icon: markerImg,               
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          });
+          gmarkers.push(marker);
+          contentString[i] = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">'+locations['store_name']+'</h3>'+
+            '<div id="bodyContent">'+locations['store_description']+'</div>'+
+            '</div>';       
+          google.maps.event.addListener(marker, 'click', (function(marker,i) {  
+               return function() {  
+                   var content = contentString;
+                 
+                   infowindow.setContent(contentString[i]);  
+                   infowindow.open(map, marker);  
+               }  
+             })(marker,i));
+     
+   
+   }
+ </script>
+ <div class="map" >         
+      <div id="map_canvas" style="height:250px; width: 100%;" ></div>
+</div> 
+
+   <?php $timetable = $this->getStoresHours($currentStores->getTimetableId()); 
+          if($timetable->getData()): 
+          ?>
+      
+        <div class="clear"></div>
+        <div class="opening_hours_block">
+         
+          <table>
+            <tr><th><?php echo __('Day'); ?></th><th><?php echo __('Working Hours'); ?></th><th><?php echo __('Break'); ?></th></tr>
+            <tr><th><?php echo __('Monday'); ?></th><td>
+              <?php if($timetable->getMondayStatus()): 
+echo date('H:i A', strtotime($timetable->getMondayOpenTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getMondayCloseTime())); ?></td><td>
+              <?php 
+echo date('H:i A', strtotime($timetable->getMondayBreakTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getMondayOffbreakTime())); ?></td>
+<?php
+               else: ?> <td colspan="2"> <?php echo __('Closed'); ?></td><?php
+               endif; ?>   
+            </td></tr>
+            <tr><th><?php echo __('Tuesday'); ?></th><td>
+              <?php if($timetable->getTuesdayStatus()): 
+echo date('H:i A', strtotime($timetable->getTuesdayOpenTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getTuesdayCloseTime())); ?></td><td>
+              <?php 
+echo date('H:i A', strtotime($timetable->getTuesdayBreakTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getTuesdayOffbreakTime())); ?></td>
+<?php
+               else: ?> <td colspan="2"> <?php echo __('Closed'); ?></td><?php
+               endif; ?>   
+            </td></tr>
+            <tr><th><?php echo __('Wednesday'); ?></th><td>
+              <?php if($timetable->getWednesdayStatus()): 
+echo date('H:i A', strtotime($timetable->getWednesdayOpenTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getWednesdayCloseTime())); ?></td><td>
+              <?php 
+echo date('H:i A', strtotime($timetable->getWednesdayBreakTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getWednesdayOffbreakTime())); ?></td>
+<?php
+               else: ?> <td colspan="2"> <?php echo __('Closed'); ?></td><?php
+               endif; ?>   
+            </td></tr>
+            <tr><th><?php echo __('Thursday'); ?></th><td>
+              <?php if($timetable->getThursdayStatus()): 
+echo date('H:i A', strtotime($timetable->getThursdayOpenTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getThursdayCloseTime())); ?></td><td>
+              <?php 
+echo date('H:i A', strtotime($timetable->getThursdayBreakTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getThursdayOffbreakTime())); ?></td>
+<?php
+               else: ?> <td colspan="2"> <?php echo __('Closed'); ?></td><?php
+               endif; ?>   
+            </td></tr>
+            <tr><th><?php echo __('Friday'); ?></th><td>
+              <?php if($timetable->getFridayStatus()): 
+echo date('H:i A', strtotime($timetable->getFridayOpenTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getFridayCloseTime())); ?></td><td>
+              <?php 
+echo date('H:i A', strtotime($timetable->getFridayBreakTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getFridayOffbreakTime())); ?></td>
+<?php
+               else: ?> <td colspan="2"> <?php echo __('Closed'); ?></td><?php
+               endif; ?>   
+            </td></tr>
+            <tr><th><?php echo __('Saturday'); ?></th><td>
+              <?php if($timetable->getSaturdayStatus()): 
+echo date('H:i A', strtotime($timetable->getSaturdayOpenTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getSaturdayCloseTime())); ?></td><td>
+              <?php 
+echo date('H:i A', strtotime($timetable->getSaturdayBreakTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getSaturdayOffbreakTime())); ?></td>
+<?php
+               else: ?> <td colspan="2"> <?php echo __('Closed'); ?></td><?php
+               endif; ?>   
+            </td></tr>
+             <tr><th><?php echo __('Sunday'); ?></th><td>
+              <?php if($timetable->getSundayStatus()): 
+echo date('H:i A', strtotime($timetable->getSundayOpenTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getSundayCloseTime())); ?></td><td>
+              <?php 
+echo date('H:i A', strtotime($timetable->getSundayBreakTime()));
+echo '&nbsp;&nbsp;&nbsp;';
+echo date('H:i A', strtotime($timetable->getSundayOffbreakTime())); ?></td>
+<?php
+               else: ?> <td colspan="2"> <?php echo __('Closed'); ?></td><?php
+               endif; ?>   
+            </td></tr>
+          </table>
+        
+        </div>
+        <?php endif; ?>
+
+
+<script type="text/javascript">
+  require(['jquery', 'jquery/ui'], function($){
+  $(document).ready(function(){
+  initMap();
+});
+});
+</script>       
+        <div class="clear"></div>

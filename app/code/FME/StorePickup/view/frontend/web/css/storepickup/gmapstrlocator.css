@@ -1,0 +1,306 @@
+
+.inner_container { max-width:1200px; margin:0 auto; padding:15px; }
+
+/*FME Google Map Store Locator*/
+
+.google_map_locator { width:100%; clear:both; padding:30px 0 }
+
+.google_map_locator h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #474747;
+    padding: 10px 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;}
+
+.google_map_locator h2 span { font-size:20px; font-weight:400; color:#ec337e; padding:10px 5px }
+
+.google_map_locator h3 { font-size:28px; font-weight:400; color:#474747; padding:10px 0; padding-bottom:20px; }
+
+.google_map_locator p { font-size:14px; font-weight:400; color:#474747; line-height:24px; padding:8px 0 }
+
+.google_map_locator .search_content_block { width:100%; background:#65492e; border-radius:2px; border:#e1e1e1 1px dashed; padding:20px; box-sizing: border-box; margin:30px 0 }
+
+/*Search*/
+
+.google_map_locator .search_content_block .search_block { width:33%; display:inline-block }
+
+.google_map_locator .search_content_block .search_block input { width:100%; padding:13px 12px; font-size:15px; color:474747; border:0px; box-sizing: border-box;
+    -moz-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.4); }
+
+.google_map_locator .search_content_block .search_block input::-moz-placeholder { opacity:0.7; }
+
+/*Slider*/
+
+.google_map_locator .search_content_block .slider { width:33%; display:inline-block;  vertical-align:middle }
+
+.google_map_locator .search_content_block .slider img { max-width:100%; height:auto; }
+
+/*Buttons*/
+
+.google_map_locator .search_content_block .buttons_container { width:33%; display:inline-block; text-align:right; vertical-align:middle }
+
+.google_map_locator .search_content_block .buttons_container.store_info { width:100%; text-align:left; }
+
+.google_map_locator .search_content_block .buttons_container button {width: 30%;
+    background: #ec337e;
+    border-radius: 2px;
+    padding: 11px 25px;
+    font-size: 15px;
+    color: #fff;
+    border: 0px;
+    cursor: pointer;
+    margin-left: 10px;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+    line-height: 22px; }
+
+.google_map_locator .search_content_block .buttons_container.store_info button { width:auto; }
+
+.google_map_locator .search_content_block .buttons_container button:hover { background:#2096c7; }
+
+/*Stores List*/
+
+.google_map_locator .stores_container { width:100%; clear:both; padding-top:10px;  }
+
+.google_map_locator .stores_container .stores_list { width:37%; display:inline-block; float:left; padding:0px; padding-bottom:2px; box-sizing: border-box; }
+
+.google_map_locator .stores_container .stores_list .store_title { background:#65492e; padding:15px; border-radius:2px; font-size:20px; font-weight:400; color:#fff; }
+
+.google_map_locator .stores_container .stores_list .store_title span {float: right;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    padding: 4px 5px;
+    border-radius: 2px;
+    margin-top: 1px;}
+
+/*Stores*/
+
+.google_map_locator .stores_container .stores_list .store_block { background:#f8f8f8; width:100%; padding:2px; box-sizing: border-box; height:600px; overflow:auto; margin-bottom:30px; border-bottom:#f8f8f8 2px solid; }
+
+.google_map_locator .stores_container .stores_list .store_block.store_info { height:auto; }
+
+.google_map_locator .stores_container .stores_list .store_block ul { list-style:none; padding:0px; margin:0px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li { width:100%; padding:18px 10px; margin:3px 0; box-sizing:border-box; margin-bottom:20px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li.last { margin-bottom:0; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li.white { background:#fff; padding:22px 10px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store { width:100%; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .storeThumnb { width:20%; float:left; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .storeThumnb img { max-width:100%; height:auto; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .store_content { width:78%; float:right; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .store_content a { font-size:15px;text-decoration: none; font-weight:500; color:#474747; line-height:24px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .store_content a:hover { color:#26a9e0; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .store_content p { font-size:14px; font-weight:400; color:#666; line-height:24px; padding:2px 0 }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .store_content p.buttons { padding-top:10px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .store_content p span { font-weight:500; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .store_content p a { background:#fff;text-decoration: none; font-size:14px; font-weight:400; color:#26a9e0; padding:3px 14px; margin-right:3px;-webkit-transition: background-color 0.3s ease-out; -moz-transition: background-color 0.3s ease-out; -o-transition: background-color 0.3s ease-out; transition: background-color 0.3s ease-out; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .store_content p a:hover { background:#26a9e0; color:#fff; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li.white .store .store_content p a { background:#f8f8f8; text-decoration: none;}
+
+.google_map_locator .stores_container .stores_list .store_block ul li.white .store .store_content p a:hover { background:#26a9e0; }
+
+/*Direction*/
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .direction { background:#f8f8f8; padding:10px; margin-top:20px; padding-top:0 }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .direction .dir_option { width:100%; clear:both; padding:10px 0; padding-top:0 }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .direction .dir_option input { display:inline-block; margin-right:8px; float:left }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .direction .dir_option label { display:inline-block; float:left; margin-right:6px; margin-top:0px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .input_container { width:100%; padding-top:5px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .input_container input {  width:100%; padding:12px 12px; font-size:14px; color:474747; border:0px; box-sizing:border-box; margin-bottom:5px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .input_container button { background:#ec337e; border:0px; padding:7px 15px; border-radius:2px; cursor:pointer; margin-top:5px; font-size:14px; font-weight:500; color:#fff; text-transform:uppercase; -webkit-transition: background-color 0.3s ease-out; -moz-transition: background-color 0.3s ease-out; -o-transition: background-color 0.3s ease-out; transition: background-color 0.3s ease-out; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .input_container button:hover { background:#f1307e; }
+
+
+/*Address Direction*/
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .address_direction_block { background:#fff; padding:10px; width:100%; height:300px; display: none; overflow:auto; box-sizing: border-box }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .address_direction_block .direction_title { background:#f8f8f8; padding:17px 10px; padding-top:20px; text-align:center; font-weight:500; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .address_direction_block .directionblock { width:100%; clear:both; box-sizing: border-box; padding:20px 10px; border-bottom:#f8f8f8 1px solid; font-size:13px; font-weight:400; color:#474747; line-height:22px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .address_direction_block .directionblock span { font-size:14px; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .address_direction_block .directionblock b { font-weight:600; }
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .address_direction_block .directionblock a { color:#26a9e0; text-decoration: none;}
+
+.google_map_locator .stores_container .stores_list .store_block ul li .store .address_direction_block .directionblock a:hover { color:#474747; }
+
+/*Tags*/
+
+.google_map_locator .stores_container .stores_list .tags_block { width:100%; clear:both; padding:30px 0; }
+
+.google_map_locator .stores_container .stores_list .tags_block ul { list-style:none; padding:0; margin:0; }
+
+.google_map_locator .stores_container .stores_list .tags_block ul li { display:inline-block; margin-right:3px; margin-bottom:21px; }
+
+.google_map_locator .stores_container .stores_list .tags_block ul li a { background:#f8f8f8;text-decoration: none; padding:4px 8px; padding-bottom:3px; font-size:14px; font-weight:400; color:#474747; -webkit-transition: background-color 0.3s ease-out; -moz-transition: background-color 0.3s ease-out; -o-transition: background-color 0.3s ease-out; transition: background-color 0.3s ease-out; text-decoration: none; }
+
+.google_map_locator .stores_container .stores_list .tags_block ul li a:hover { background:#26a9e0; color:#fff; }
+
+
+
+/*Back Button*/
+
+.google_map_locator .back_btn { clear:both; padding:20px 0; }
+
+.google_map_locator .back_btn a { background:#26a9e0; text-decoration: none;border-radius:2px;text-decoration: none; padding:5px 25px; font-size:15px; color:#fff; border:0px; cursor:pointer; margin-left:0px; -webkit-transition: background-color 0.3s ease-out; -moz-transition: background-color 0.3s ease-out; -o-transition: background-color 0.3s ease-out; transition: background-color 0.3s ease-out; }
+
+.google_map_locator .back_btn a:hover { background:#2096c7; }
+ 
+
+/*Opening Hours*/
+
+.google_map_locator .stores_container .stores_list .opening_hours_block { background:#f8f8f8; width:100%; padding:2px; box-sizing: border-box }
+
+.google_map_locator .stores_container .stores_list .opening_hours_block table { width:100%; padding:0px; margin:0px; }
+
+.google_map_locator .stores_container .stores_list .opening_hours_block table thead { background:#fff; font-weight:600; }
+
+.google_map_locator .stores_container .stores_list .opening_hours_block table tr.white { background:#fff; }
+
+.google_map_locator .stores_container .stores_list .opening_hours_block table td {  padding:18px 15px; font-size:13px; }
+
+.google_map_locator .stores_container .stores_list .opening_hours_block table tbody td:first-child { font-weight:500; }
+
+/*Right Side*/
+
+.google_map_locator .stores_container .map_locator_rightside { width:60%; display:inline-block; float:right }
+
+.google_map_locator .stores_container .map_locator_rightside .content { width:100%; padding:20px 0 }
+
+.google_map_locator .stores_container .map_locator_rightside .content p { font-size:14px; font-weight:400; color:#474747; line-height:24px; padding:10px 0 }
+
+/*Map*/
+
+.google_map_locator .stores_container .map { width:100%; }
+
+.google_map_locator .stores_container .map img { max-width:100%; height:auto; }
+
+
+/*Tags Page*/
+
+.google_map_locator .tags_detail { width:100%; }
+.google_map_locator .tags_detail h3 img { float: right; }
+
+.google_map_locator .tags_detail .stores_container .stores_list { width:100%; float:none; }
+
+.google_map_locator .tags_detail  .stores_container .stores_list .store_block { height:auto; }
+
+.google_map_locator .tags_detail  .stores_container .map_locator_rightside { width:100%; display:inline-block; float:none }
+
+
+@media (min-width: 200px) and (max-width: 800px) {
+
+.google_map_locator h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #474747;
+    padding-bottom:0px;
+    display: flex;
+    align-items: center;
+}
+.google_map_locator h2 span { font-size:16px; line-height:28px; padding:0; color: #EC337F; }
+.google_map_locator p { font-size:14px; line-height:24px; }
+    
+.google_map_locator .search_content_block { padding:20px 10px; }
+.google_map_locator .search_content_block .buttons_container.store_info button { width:auto; margin-left:0px; }
+    
+.google_map_locator .search_content_block .search_block { width:100%; }
+.google_map_locator .search_content_block .slider { width:100%; padding:20px 0 }
+.google_map_locator .search_content_block .buttons_container { width:100%; }
+.google_map_locator .search_content_block .buttons_container button { width:auto; }
+    
+.google_map_locator .stores_container .stores_list { width:100%; }
+.google_map_locator .stores_container .stores_list .store_block ul li .store .direction { padding:5px; }
+.google_map_locator .stores_container .stores_list .store_block ul li { padding:18px 0px; }
+.google_map_locator .stores_container .map { width:100%; margin-top:20px; }
+    
+.google_map_locator .stores_container .stores_list .opening_hours_block table td {  padding:18px 10px; font-size:13px; line-height:22px; }
+.google_map_locator .stores_container .map_locator_rightside { width: 100%;  }
+.google_map_locator .tags_detail  .stores_container .map_locator_rightside { width:100%; }    
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+
+    
+
+.google_map_locator .search_content_block .buttons_container button { width:auto; }
+    
+.google_map_locator .stores_container .stores_list { width:48%; }
+.google_map_locator .stores_container .stores_list .store_block ul li .store .direction { padding:5px; }
+.google_map_locator .stores_container .stores_list .store_block ul li { padding:18px 0px; }
+.google_map_locator .stores_container .map { width:48%; margin-top:0px; }  
+    
+    .google_map_locator .stores_container .stores_list .opening_hours_block table td {  padding:18px 10px; font-size:14px; line-height:24px; }
+    
+}
+
+
+.google_map_locator .sliders {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 20px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.google_map_locator .sliders:hover {
+    opacity: 1;
+}
+
+.google_map_locator .sliders::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 25px;
+    background: #f3793b;
+    cursor: pointer;
+}
+
+.google_map_locator .sliders::-moz-range-thumb {
+    width: 15px;
+    height: 25px;
+    background: #f3793b;
+    cursor: pointer;
+}
+ .google_map_locator .slider #range { color: #f3793b; float: right; font-size: 16px; font-weight: 700; margin-left: 5px;  }
+ 
+ 
+ .google_map_locator_detail { }
+ 
+ .google_map_locator_detail .fb-container { }
+ 
+ .google_map_locator_detail .contact-container { }

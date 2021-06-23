@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>        
+        <tab id="fmeextensions" translate="label" sortOrder="2001"><label>FME Extensions</label></tab> 
+        <section id="storepickup" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Store Pickup</label>
+            <tab>fmeextensions</tab>
+            <resource>FME_StorePickup::configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>                
+                <field id="page_title" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Page Title</label>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+                <field id="meta_keywords" translate="label" type="textarea" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>META Keywords</label>
+                    <comment></comment>
+                </field>
+                <field id="meta_description" translate="label" type="textarea" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>META Description</label>
+                    <comment></comment>
+                </field>
+                <field id="page_heading" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Page Heading</label>
+                    <comment>Main heading of the GMap store locator page.</comment>
+                </field>
+                <field id="page_subheading" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Page Sub Heading</label>
+                    <comment>Sub heading of the GMap store locator page.</comment>
+                </field>
+                <field id="std_latitude" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Standard Latitude</label>                      
+                    <comment></comment>
+                </field>
+                <field id="std_longitude" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Standard Longitude</label>                      
+                    <comment></comment>
+                </field>                
+                <field id="api_key" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API Key</label>
+                    <comment>Google Maps API Key (v3)</comment>
+                </field>
+                <field id="map_zoom" translate="label" type="text" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Map Zoom</label>
+                    <validate>required-entry validate-digits</validate>
+                    <comment>Google Maps Zoom Level</comment>
+                </field>
+                <field id="store_image" translate="label comment" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store Image</label>
+                    <backend_model>FME\StorePickup\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">storepickup</base_url>
+                </field>
+                <field id="marker_image" translate="label comment" type="image" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Marker Image</label>
+                    <backend_model>FME\StorePickup\Model\Config\Backend\Image</backend_model>
+                    <base_url type="media" scope_info="1">storepickup</base_url>
+                </field>
+            </group>
+            <group id="storelocatore_search" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Search</label>
+                <field id="defaut_radius" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Default Radius</label>
+                    <validate>validate-digits</validate>
+                </field>
+                <field id="maximum_radius" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Maximum Radius</label>
+                    <validate>validate-digits</validate>
+                </field>
+            </group>
+            <group id="facebook_comments" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Facebook Comments</label>
+                
+                <field id="fb_comments_enable" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Facebook Comments</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+     
+
+                <field id="fb_app_id" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook App ID</label>
+                    <comment>Get App ID from : https://developers.facebook.com/tools/comments/</comment>
+                </field>
+            </group>
+
+
+            <group id="manage_links" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Manage Links</label>
+                
+                <field id="footer_link_enable" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Footer Link</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="label_footer" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Footer Link Label</label>
+                    <comment>Label/Title for footer link</comment>
+                </field>
+            </group>
+            <group id="seo_suffix" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Search Engine Optimization</label>
+                <field id="gmap_identifier" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Store Identifier</label>
+                    <comment>Gmap Store Identifier</comment>
+                </field>
+                <field id="url_suffix" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>URL Suffix</label>               
+                    <comment>(eg: .html)</comment>
+                </field>
+                <field id="tag_url" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tag URL</label>               
+                    <comment>(eg: Tag)</comment>
+                </field>
+            </group>    
+        </section>
+        <section id="carriers" translate="label" type="text" sortOrder="320" showInDefault="1" showInStore="1" showInWebsite="1">
+            <group id="fmestorepickup" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Store Pickup</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="name" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Method Name</label>
+                </field>
+                <field id="sallowspecific" translate="select" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ship to Applicable Countries</label>
+                    <frontend_class>shipping-applicable-country</frontend_class>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="35" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ship to Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sort Order</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
+
+

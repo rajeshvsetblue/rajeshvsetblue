@@ -23,7 +23,8 @@
 	$desktop = $this->getConfig('itemsDesktop');
 	$desktop_small = $this->getConfig('itemsDesktopSmall');
 	$tablet = $this->getConfig('itemsTablet');
-	$mobile = $this->getConfig('itemsMobile');
+ 	$mobile = $this->getConfig('itemsMobile');
+	$mobile2 = 2;
 ?>
 
 <div class="categorytab-container">
@@ -246,7 +247,7 @@ require([
 		itemsDesktop : [1260,<?php echo $desktop; ?>],
 		itemsDesktopSmall : [1199,<?php echo $desktop_small; ?>],
 		itemsTablet: [780,<?php echo $tablet; ?>],
-		itemsMobile : [479,<?php echo $mobile; ?>],
+		itemsMobile : [479,<?php echo $mobile2; ?>],
 	});
 	
 });

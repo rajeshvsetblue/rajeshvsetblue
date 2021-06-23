@@ -83,10 +83,10 @@
 										<?php echo $productImageThumb->toHtml(); ?>
 									</span>
 							</a>
-							<div class="quickview-product visible-onhover">
-								<a href="javascript:void(0)" data-role="quickview-button" data-id="<?php echo $_item->getId(); ?>" data-href="<?php echo $block->getUrl('quickview/product/quickview/id/' . $_item->getId()) ?>" title="<?php echo $block->escapeHtml(__('Quick view')); ?>" class="ajax diamond tooltip-hover" data-placement="top" data-original-title="<?php echo ('Quick view') ?>">	<i class="lnr lnr-move"></i>
-								</a>
-						    </div>
+							<!--<div class="quickview-product visible-onhover">-->
+							<!--	<a href="javascript:void(0)" data-role="quickview-button" data-id="<?php /** echo $_item->getId(); ?>" data-href="<?php echo $block->getUrl('quickview/product/quickview/id/' . $_item->getId()) ?>" title="<?php echo $block->escapeHtml(__('Quick view')); ?>" class="ajax diamond tooltip-hover" data-placement="top" data-original-title="<?php echo ('Quick view') **/ ?>">	<i class="lnr lnr-move"></i>-->
+							<!--	</a>-->
+						 <!--   </div>-->
 							<div class="product-label">
 								<?php if ( $_item->getFinalPrice() < $_item->getPrice() ): ?>
 									<span class="onsale">
@@ -160,16 +160,16 @@
 									<?php
 										$compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare');
 									?>
-									<div class="action-compare visible-onhover">
-										<a href="#"
-										   class="action button tocompare"
-										   title="<?php echo $block->escapeHtml(__('Add to Compare')); ?>"
-										   aria-label="<?php echo $block->escapeHtml(__('Add to Compare')); ?>"
-										   data-post='<?php /* @escapeNotVerified */ echo $compareHelper->getPostDataParams($_item); ?>'
-										   role="button">
-											<i class="lnr lnr-layers"></i>
-										</a>
-									</div>
+									<!--<div class="action-compare visible-onhover">-->
+									<!--	<a href="#"-->
+									<!--	   class="action button tocompare"-->
+									<!--	   title="<?php /** echo $block->escapeHtml(__('Add to Compare')); ?>"-->
+									<!--	   aria-label="<?php echo $block->escapeHtml(__('Add to Compare')); ?>"-->
+										   data-post='<?php /* @escapeNotVerified */ /**echo $compareHelper->getPostDataParams($_item); **/?>'
+									<!--	   role="button">-->
+									<!--		<i class="lnr lnr-layers"></i>-->
+									<!--	</a>-->
+									<!--</div>-->
 								<?php endif; ?>
 							</div>		
 						</div>

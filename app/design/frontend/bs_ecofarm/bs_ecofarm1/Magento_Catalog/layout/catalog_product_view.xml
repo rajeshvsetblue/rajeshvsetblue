@@ -25,6 +25,8 @@
         </referenceBlock>
 		<move element="page.main.title" destination="box.inner1" before="-"/>
 		
+		<!-- test-->
+		<move element="product.info.addto" destination="product.info.addtocart.additional" />
 		
         <referenceBlock name="root">
             <arguments>
@@ -127,6 +129,8 @@
 											<container name="product.info.social" label="Product social links container" htmlTag="div" htmlClass="product-social-links" after="product.info.overview">
 												<block class="Magento\Catalog\Block\Product\View" name="product.info.addto" as="addto" template="product/view/addto.phtml"/>
 												<block class="Magento\Catalog\Block\Product\View" name="product.info.mailto" template="product/view/mailto.phtml"/>
+												
+												
 												<!-- Product Note -->
 												<block class="Magento\Catalog\Block\Product\View" name="product.info.note" as="note" template="product/view/note.phtml"/>
 												<!-- Note -->
@@ -162,6 +166,8 @@
 								    </arguments>
 								</block>
 							</block>
+							
+							
 							<block class="Magento\Cookie\Block\RequireCookie" name="require-cookie" template="Magento_Cookie::require_cookie.phtml">
 								<arguments>
 									<argument name="triggers" xsi:type="array">
@@ -212,5 +218,6 @@
 	    <!-- Note -->
 		<referenceBlock name="catalog.product.related" remove="true"/>
 		<referenceBlock name="product.info.upsell" remove="true"/>
+		<referenceBlock name="product.info.details" remove="true"/>
     </body>
 </page>

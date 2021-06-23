@@ -1,0 +1,39 @@
+<div  style="display: none" id="fmestorepickup" class="form form-shipping-address">
+    <div class="fieldset">
+		<div class="control field">
+            <label class="label" for="storepickup_id">
+                <span data-bind="i18n: 'Select Store'"></span>
+            </label>
+            <div class="control">
+               <select name="storepickup_id" autocomplete="off" class="select "
+        data-bind="
+                                    attr: {id: 'storepickup_id'},
+                                    options: stores,
+                                    value: selectedStore,
+                                    optionsText: 'label',
+                                    optionsValue: 'value',
+                                    event: {change: updateValue}
+                                    ">
+			</select>
+            </div>
+        </div>
+        <div class="pickuptime" id="pickuptime" >
+            <a href="javascript:void()" data-bind=" event: {click: updateContent}"><span data-bind="i18n: 'View Store Location and Timing'"></span></a>
+            <div id="newcontent"  data-bind=" html:  gefirstone"></div>
+        </div>
+                    <div class="pickuptime" id="pickupcontent" >
+
+        </div>
+        <div class="control field">
+            <label class="label" for="pickupdatetime">
+                <span data-bind="i18n: 'Pickup Date and Time'"></span>
+            </label>
+            <div class="control">
+                <input class="input-text" data-bind="datetimepicker: true" id="pickupdatetime" name="pickupdatetime" type="text" readonly="true" />
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+   

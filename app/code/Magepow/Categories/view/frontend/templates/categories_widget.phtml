@@ -28,51 +28,24 @@ $description      = $block->isShowDescription();
 <?php endif; ?>
 <section class="widget box-section block-recent-posts" data-bind="scope: 'recemt-posts'">
     <div class="container"> 
-		<!--<div class="rokan-product-heading rokan-onsale-heading">-->
-		<!--	<h2>'Show' Sweet of You</h2>-->
-		<!--</div>-->
         <div class="owl-container">
         	<div class="block-content">
-        		
-		    
-<!--<ul class="magepow-categories-<?/**php echo $layout **/ ?>">-->
- <ul class="tabs tabs-categories_tab">
-    
-    <div class="owl">
-    <?php foreach ($categories as $cat): ?>
-      <div class="item">
-        <!--<li class="magepow-categories-category-wrapper item">-->
-        <!--    <a class="magepow-categories-category" href="<?/**php echo $cat->getUrl() ?>">-->
-        <!--        <div class="magepow-categories-category-image">-->
-        <!--            <img src="</**?php echo $this->getImage($cat) ?>" alt="<?/**php echo $cat->getName() ?>"/>-->
-        <!--        </div>-->
-        <!--        <div class="magepow-categories-category-name">-->
-        <!--            <span><?/**php echo $cat->getName() ?></span>-->
-        <!--        </div>-->
-        <!--    </a>-->
-        <!--    <?/**php if($description):**/ ?>-->
-        <!--        <div class="magepow-categories-category-description">-->
-        <!--            <?/**php echo $this->getDescription($cat) ?>-->
-        <!--        </div>-->
-        <!--    <?/**php endif; **/?>-->
-        <!--</li>-->
-        
-        
-        <li>
-			<a href="<?php echo $cat->getUrl() ?>">
-            <img class="categories-thumb-icon" src="<?php echo $this->getImage($cat) ?>" alt="<?php echo $cat->getName() ?>"><h3 class="cnt"><?php echo $cat->getName() ?></h3> </a>
-        </li>
-      </div>
-    <?php endforeach; ?>
+                <ul class="tabs tabs-categories_tab">
+                    <div id="catlist" class="owl-carousel">
+                    <?php foreach ($categories as $cat): ?>
+                      <div class="item">
+                        <li>
+                			<a href="<?php echo $cat->getUrl() ?>">
+                            <img class="categories-thumb-icon" src="<?php echo $this->getImage($cat) ?>" alt="<?php echo $cat->getName() ?>"><h3 class="cnt"><?php echo $cat->getName() ?></h3> </a>
+                        </li>
+                      </div>
+                    <?php endforeach; ?>
+                    </div>
+                </ul>
+            </div>
+        </div>
     </div>
-</ul>
-
-
-</div>
-</div>
-</div>
 </section>
-
 
 <script type="text/javascript">
 	require([
@@ -82,12 +55,14 @@ $description      = $block->isShowDescription();
 	], function ($) {
 		'use strict';
 
-		jQuery(".block-recent-posts .owl").owlCarousel({
+		jQuery("#catlist").owlCarousel({
+		    lazyLoad: true,
+			autoPlay : false,
 			items : 4,
-			itemsDesktop : [1199,3],
-			itemsDesktopSmall : [980,3],
-			itemsTablet: [768,2],
-			itemsMobile : [479,1],
+			itemsDesktop : [1199,4],
+			itemsDesktopSmall : [980,4],
+			itemsTablet: [768,3],
+			itemsMobile : [479,2],
 			slideSpeed : 500,
 			paginationSpeed : 500,
 			rewindSpeed : 500,
@@ -99,3 +74,4 @@ $description      = $block->isShowDescription();
 		});
 	});
 	</script>
+	

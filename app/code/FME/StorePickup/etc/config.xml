@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <storepickup>
+        	<general>
+        		<enable>1</enable>
+        		<page_title>Store Pickup</page_title>
+        		<meta_keywords>Meta Key words stores</meta_keywords>
+        		<meta_description>Meta description for stores</meta_description>
+        		<page_heading>Reach Your Nearest Store</page_heading>
+        		<page_subheading>Save your time by getting access to the nearest store</page_subheading>
+        		<std_latitude>40.712775</std_latitude>
+        		<std_longitude>-74.005973</std_longitude> 		
+        		<map_zoom>3</map_zoom>
+        	</general>
+            <storelocatore_search>
+                <defaut_radius>50</defaut_radius>
+                <maximum_radius>100</maximum_radius>
+            </storelocatore_search>
+        	<manage_links>
+        		<footer_link_enable>1</footer_link_enable>
+        		<label_footer>Store Pickup</label_footer>
+        	</manage_links>
+        	<seo_suffix>
+        		<gmap_identifier>storepickup</gmap_identifier>
+        		<url_suffix>.html</url_suffix>
+                <tag_url>tag</tag_url>
+        	</seo_suffix>        	      	    
+        </storepickup>   
+         <carriers>
+            <fmestorepickup>
+                <active>1</active>
+                <title>FME Store Pickup</title>
+                <name>Store Pickup</name>
+                <shipping_subtotal>00</shipping_subtotal>
+                <specificerrmsg>This shipping method is not available. To Use this shipping method, please contact us.</specificerrmsg>
+                <sallowspecific>0</sallowspecific>
+                <sort_order>200</sort_order>
+                <model>FME\StorePickup\Model\Carrier\StorePickup</model>
+            </fmestorepickup>
+        </carriers>      
+    </default>
+</config>

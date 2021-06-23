@@ -54,5 +54,7 @@
             </arguments>
             <block class="Magento\Catalog\Block\Category\Rss\Link" name="rss.link" template="Magento_Catalog::category/rss.phtml"/>
         </referenceBlock>
+        <!--<referenceBlock name="product_list_toolbar" remove="true"/>-->
+        <referenceBlock name="product_list_toolbar_pager" remove="true" />
     </body>
 </page>

@@ -1,0 +1,16 @@
+<?php $helper = $block->googleMapsStoreHelper;
+
+
+
+ if($helper->getGMapAPIKey()): ?>
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?key=<?php echo $helper->getGMapAPIKey(); ?>&libraries=places,geometry">
+    </script>
+
+
+  <?php else: ?>
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry">
+    </script>
+     <?php endif;?>
+       

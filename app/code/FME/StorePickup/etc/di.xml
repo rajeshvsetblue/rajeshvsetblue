@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">    
+ 
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="storepickup_storelocator_listing_data_source" xsi:type="string">FME\StorePickup\Model\ResourceModel\StorePickup\Grid\Collection</item>
+                <item name="storepickup_tags_listing_data_source" xsi:type="string">FME\StorePickup\Model\ResourceModel\Tags\Grid\Collection</item>
+                <item name="storepickup_holiday_listing_data_source" xsi:type="string">FME\StorePickup\Model\ResourceModel\Holiday\Grid\Collection</item>
+                <item name="storepickup_timetable_listing_data_source" xsi:type="string">FME\StorePickup\Model\ResourceModel\Timetable\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+<!--
+/**
+ * Di settings for table fme_StorePickup start 
+ * 
+ */
+-->    
+    <type name="FME\StorePickup\Model\ResourceModel\StorePickup\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">fme_storepickup</argument>
+            <argument name="eventPrefix" xsi:type="string">storepickup_storelocator_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">storepickup_storelocator_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">FME\StorePickup\Model\ResourceModel\StorePickup</argument>
+        </arguments>
+    </type>
+    
+    <virtualType name="storepickupGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    
+    <virtualType name="storepickupGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">FME\StorePickup\Model\ResourceModel\StorePickup\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">storepickupGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <!--
+/**
+ * Di settings for table fme_storepickup_holiday start 
+ * 
+ */
+-->    
+    <type name="FME\StorePickup\Model\ResourceModel\Holiday\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">fme_storepickup_holiday</argument>
+            <argument name="eventPrefix" xsi:type="string">storepickup_holiday_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">storepickup_holiday_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">FME\StorePickup\Model\ResourceModel\Holiday</argument>
+        </arguments>
+    </type>
+    
+    <virtualType name="storePickupHolidayGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    
+    <virtualType name="storePickupHolidayGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">FME\StorePickup\Model\ResourceModel\Holiday\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">storePickupHolidayGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <!--
+/**
+ * Di settings for table fme_timetable start 
+ * 
+ */
+-->    
+    <type name="FME\StorePickup\Model\ResourceModel\Timetable\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">fme_storepickup_timetable</argument>
+            <argument name="eventPrefix" xsi:type="string">StorePickup_timetable_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">StorePickup_timetable_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">FME\StorePickup\Model\ResourceModel\Timetable</argument>
+        </arguments>
+    </type>
+    
+    <virtualType name="storepickupTimetableGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    
+    <virtualType name="storepickupTimetableGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">FME\StorePickup\Model\ResourceModel\Timetable\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">storepickupTimetableGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+<!--
+/**
+ * Di settings for table fme_storepickup_tags start 
+ * 
+ */
+-->
+    <type name="FME\StorePickup\Model\ResourceModel\Tags\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">fme_storepickup_tags</argument>
+            <argument name="eventPrefix" xsi:type="string">storepickup_tags_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">storepickup_tags_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">FME\StorePickup\Model\ResourceModel\Tags</argument>
+        </arguments>
+    </type>
+    
+    <virtualType name="storePickupTagsGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>    
+    <virtualType name="storePickupTagsGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">FME\StorePickup\Model\ResourceModel\Tags\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">storePickupTagsGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <!--
+/**
+ * Single Image Upload for tags
+ * 
+ */
+-->
+    <virtualType name="FME\StorePickup\CategoryImageUpload" type="FME\StorePickup\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">storepickup/tags</argument>
+            <argument name="basePath" xsi:type="string">storepickup/tags</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="FME\StorePickup\Controller\Adminhtml\Tags\Image\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">FME\StorePickup\CategoryImageUpload</argument>
+        </arguments>
+    </type>
+    <virtualType name="FME\StorePickup\ImportFileUpload" type="FME\StorePickup\Model\FileUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">storepickup/import</argument>
+            <argument name="basePath" xsi:type="string">storepickup/import</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="csv" xsi:type="string">csv</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="FME\StorePickup\Controller\Adminhtml\Import\Upload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">FME\StorePickup\ImportFileUpload</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="fme_storepickup_field" type="FME\StorePickup\Plugin\Checkout\Model\ShippingInformationManagement" sortOrder="1"/>
+    </type>    
+</config>

@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-6 text-left contact-header-left">
-						<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top_bar_left')->toHtml(); ?>
+						<?php /** echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('top_bar_left')->toHtml(); **/?>
 					</div>
 
 					<div class="col-xs-12 col-sm-6 col-md-6">
@@ -17,8 +17,8 @@
 									<a href="<?php echo $this->helper('Rokanthemes\Themeoption\Helper\Data')->getBaseUrl('customer/account/login/');?>">
 										<i class="icon-users2 lnr lnr-user"></i>
 										<div class="txt-login hidden-sm">
-											<strong><?php echo __('Login');?></strong> <?php echo __('or');?> <span>
-											<strong><?php echo __('Register');?></strong></span>
+											<strong><?php /** echo __('Login');?></strong> <?php echo __('or');**/?> <span>
+											<strong><?php /** echo __('Register'); **/?></strong></span>
 										</div>
 									</a>
 									<?php

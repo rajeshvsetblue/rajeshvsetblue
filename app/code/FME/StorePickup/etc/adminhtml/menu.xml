@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <update id="FME_Extensions::fmeextensions"
+             title="FME Extensions" translate="title" 
+             module="FME_StorePickup" sortOrder="30"
+             resource="FME_Extensions::fmeextensions"/>
+
+        <add id="FME_StorePickup::manage_gmaps"
+             title="Store Pickup" translate="title" 
+        	 module="FME_StorePickup" sortOrder="1" 
+        	 parent="FME_Extensions::fmeextensions"        	
+        	 resource="FME_StorePickup::main_menu"/>
+
+        <add id="FME_StorePickup::manage_stores"
+             title="Manage Stores" 
+             module="FME_StorePickup" sortOrder="2" 
+             parent="FME_StorePickup::manage_gmaps" 
+             action="storepickup/storelocator/"  
+             resource="FME_StorePickup::manage_stores" />
+
+        <add id="FME_StorePickup::manage_tags"
+             title="Tags" 
+             module="FME_StorePickup" sortOrder="3" 
+             parent="FME_StorePickup::manage_gmaps" 
+             action="storepickup/tags/"  
+             resource="FME_StorePickup::manage_tags" />
+
+        <add id="FME_StorePickup::manage_holiday"
+             title="Holiday" 
+             module="FME_StorePickup" sortOrder="3" 
+             parent="FME_StorePickup::manage_gmaps" 
+             action="storepickup/holiday/"  
+             resource="FME_StorePickup::manage_holiday" />
+
+        <add id="FME_StorePickup::manage_timetable"
+             title="Timetable" 
+             module="FME_StorePickup" sortOrder="3" 
+             parent="FME_StorePickup::manage_gmaps" 
+             action="storepickup/timetable/"  
+             resource="FME_StorePickup::manage_timetable" /> 
+                       
+        <add id="FME_StorePickup::configuration"
+             title="Configurations"
+             module="FME_StorePickup" sortOrder="4" 
+             parent="FME_StorePickup::manage_gmaps" 
+             action="adminhtml/system_config/edit/section/storepickup"
+             resource="FME_StorePickup::configuration" /> 
+    </menu>
+</config>
+
+ 

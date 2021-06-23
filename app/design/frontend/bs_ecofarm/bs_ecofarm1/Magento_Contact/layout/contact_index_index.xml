@@ -16,11 +16,16 @@
                     <argument name="block_id" xsi:type="string">contact-us</argument>
                </arguments>
            </block> -->
-             <block class="Magento\Cms\Block\Block" name="maps" before="page_bottom_container">
-                 <arguments>
-                      <argument name="block_id" xsi:type="string">maps</argument>
-                 </arguments>
-             </block>
+            <block class="Magento\Cms\Block\Block" name="Branches" before="maps">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">Branches</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="maps" before="page_bottom_container">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">maps</argument>
+                </arguments>
+            </block>
         </referenceContainer>      
         <referenceContainer name="col.right.sidebar">
             <container name="contact.info" as="contact_info" htmlTag="div" htmlClass="contact-info">

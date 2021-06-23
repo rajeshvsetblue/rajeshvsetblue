@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Catalog\Block\Adminhtml\Category\AssignProducts $block */
+
+/** @var \Magento\Catalog\Block\Adminhtml\Category\Tab\Product $blockGrid */
+
+$blockGrid = $block->getBlockGrid();
+$gridJsObjectName = $blockGrid->getJsObjectName();
+
+?>
+<?php  echo $block->getGridHtml(); ?>
+<input type="hidden" name="holiday_products" id="in_category_holiday" data-form-part="storepickup_storelocator_form" value="" />
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "FME_StorePickup/holiday/assign-holiday": {
+                "selectedProducts": <?php /* @escapeNotVerified */ echo $block->getHolidayJson(); ?>,
+                "gridJsObjectName": <?php /* @escapeNotVerified */ echo '"' . $gridJsObjectName . '"' ?: '{}'; ?>
+            }
+        }
+    }
+</script>
+<!-- @todo remove when "UI components" will support such initialization -->
+<script>
+    require('mage/apply/main').apply();
+</script>

@@ -1,0 +1,37 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<?php $available_stores = $block->getProductStores(); ?>
+
+<?php if(count($available_stores->getData()) > 0): ?>
+
+    <div class="product-reviews-summary">
+
+        <a  href="#" onmouseover="jQuery('#gmap_store_list').show()" >
+            <?php echo __("Available at store");  ?>
+        </a>
+
+        <?php if($available_stores): ?>
+        
+            <ul id="gmap_store_list" onmouseover="jQuery('#gmap_store_list').show()" onmouseout="jQuery('#gmap_store_list').hide()" style="padding: 15px 40px; background:#ddd; position: absolute; z-index: 999;  display: none">
+                <?php foreach($available_stores as $mapStore): ?>
+
+                    <li><a target="_blank"  href="<?php echo $block->getStoresUrl($mapStore->getIdentifier()); ?>" ><?php echo $mapStore->getStoreName(); ?></a></li>
+
+                <?php endforeach; ?>  
+            </ul>
+        
+        <?php endif; ?>
+
+    </div>
+
+<?php endif; ?>
+
+

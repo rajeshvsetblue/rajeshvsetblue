@@ -1,0 +1,405 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+
+// $orderIncrementId='000000018';
+// $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+// $orderInfo = $objectManager->create('Magento\Sales\Model\Order')->loadByIncrementId($orderIncrementId);
+// $shippingInfo = $orderInfo->getShippingAddress();
+//  $orderInfo->getShippingMethod();
+// if($orderInfo->getShippingMethod() == 'fme_storepickup_fme_storepickup'):
+// $helper = $this->helper('FME\StorePickup\Helper\Data');
+// $storeList = $helper->getInStoreList();
+// $storeID = $orderInfo->getFmestorepickupId();
+// $currentStoreAdd = $storeList[$storeID];
+// //print_r($currentStoreAdd);
+// $shippingInfo->setFirstname($currentStoreAdd['first_name']);
+// $shippingInfo->setLastname($currentStoreAdd['last_name']);
+// $shippingInfo->setStreet($currentStoreAdd['street']);
+// $shippingInfo->setTelephone($currentStoreAdd['telephone']);
+// $shippingInfo->setPostcode($currentStoreAdd['telephone']);
+// $shippingInfo->setRegion($currentStoreAdd['region']);
+// $shippingInfo->setRegionId($currentStoreAdd['region_id']);
+// $shippingInfo->setCountryId($currentStoreAdd['country_id']);
+// $shipping = $orderInfo->getShippingDescription().' <br /> '.$currentStoreAdd['last_name'].' <br /> '.$orderInfo->getFmepickupDatetime();
+// $orderInfo->setShippingDescription($shipping)->save();
+//  endif; 
+
+
+
+
+
+?>
+
+<?php $helper = $block->googleMapsStoreHelper;
+      $storeImage = $helper->getGMapStoreImage();
+
+      $markerImage = $helper->getGMapMarkerImage();   
+      $mediaUrl = $block->getMediaUrl();
+      $allTags = $block->getAllTag();  
+      $gMapTagUrl = $helper->getGMapTagUrl();
+     
+      
+      if(!$storeImage):
+        $storeImage = $block->getViewFileUrl('FME_StorePickup::images/store_icon.png');
+      else:
+        $storeImage =  $mediaUrl.$helper->getGMapStoreImage();
+      endif;
+      if(!$markerImage):
+        $markerImg = $block->getViewFileUrl('FME_StorePickup::images/marker.png');
+      else:
+         $markerImg = $mediaUrl.$markerImage;
+         $markerImg = $helper->resize($markerImage,55,55);    
+      endif;
+    
+ ?> 
+
+ 
+<?php if($helper->getGMapAPIKey()): ?>
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?key=<?php echo $helper->getGMapAPIKey(); ?>&libraries=places,geometry">
+    </script>
+     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+
+  <?php else: ?>
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry">
+    </script>
+     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+
+  <?php endif;?>
+<?php
+if($helper->isEnabledInFrontend()):
+  $Stores = $this->getAllStores();
+    if($Stores){
+	     foreach($Stores as $key => $value){
+	         $Storesdescription = $helper->getGMapMetadescription();          
+	       }
+       }      
+     $standard_lat = $helper->getGMapStandardLatitude();
+     $standard_long = $helper->getGMapStandardLongitude();
+     $standard_zoom = $helper->getGMapZoom();?>
+<script>   
+    directionsService = new google.maps.DirectionsService();
+    var geocoder = new google.maps.Geocoder();
+    markerImg = '<?php echo $markerImg; ?>';
+    distUnit = 'km';  
+    var map = null;
+    var circle = null;
+    var gmarkers = '';
+    function initMap(sel) {
+      require(["jquery"],function($) {
+        textdirection = $('.address_direction_block').html('');
+        $('.address_direction_block').hide();
+        $('.liststores').show();
+        
+      
+      });
+      directionsDisplay = new google.maps.DirectionsRenderer();
+            myData = '';        
+            var locations, i,j;
+            var locations = <?php echo json_encode($Stores->getData()) ?>; 
+            
+      for(j=0; j< locations.length; j++){
+            var gid = locations[j]['gmaps_id'];  
+            var lat = locations[j]['latitude'];
+            var lng = locations[j]['longitude'];
+            var title = locations[j]['store_name'];         
+            var description = locations[j]['store_description'];
+            var mmzoomlevel = locations[j]['zoom_level'];
+           
+        }
+          if (!(myData)){
+            var lat = <?php echo $standard_lat ?>;
+            var lng = <?php echo $standard_long ?>;
+            var mmzoomlevel = <?php echo  $standard_zoom ?>;
+           }                
+            var uluru = {lat: eval(lat),lng: eval(lng) };
+             map = new google.maps.Map(document.getElementById('map_canvas'), {
+                zoom: eval(mmzoomlevel),
+                mapTypeIds: google.maps.MapTypeId.ROADMAP,
+                center: new google.maps.LatLng(uluru)                
+            });
+               directionsDisplay.setMap(map);
+
+            var locations, i;
+            var locations = <?php echo json_encode($Stores->getData()) ?>;
+            var contentString = new Array("");      
+    gmarkers = [];
+    var infowindow = new google.maps.InfoWindow();
+      for (i = 0; i < locations.length; i++) {
+      
+          marker = new google.maps.Marker({
+              position: new google.maps.LatLng(locations[i]['latitude'], locations[i]['longitude']),
+              map: map,
+              icon: markerImg,               
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          });
+          gmarkers.push(marker);
+          contentString[i] = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">'+locations[i]['store_name']+'</h3>'+
+            '<div id="bodyContent">'+locations[i]['store_description']+'</div>'+
+            '</div>';       
+      google.maps.event.addListener(marker, 'click', (function(marker,i) {  
+           return function() {  
+               var content = contentString;
+             
+               infowindow.setContent(contentString[i]);  
+               infowindow.open(map, marker);  
+           }  
+         })(marker,i));
+      }
+      document.getElementById("totalstorecount").innerHTML = i+"<?php echo '&nbsp;'.__('STORES') ?>";
+        var mcOptions = {gridSize: 50, maxZoom: 6, imagePath:'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'};
+      var markerCluster = new MarkerClusterer(map, gmarkers, mcOptions);
+   }
+
+  function calcRoute(lati,logno,id) { 
+    initMap();
+    require(["jquery"],function($) {
+        $(document).ready(function($) {
+     textdirection = $('.address_direction_block');
+            textdirection.innerHTML= "";     
+    var selectedMode =   $('input[name=directionby'+id+']:checked').val();  
+    center =document.getElementById('direction'+id).value;
+    address=center.replace("-", ""); 
+    address=address.replace("-", ""); 
+
+    geocoder.geocode({'address': address}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      var addLati = results[0].geometry.location.lat();
+      var addLongi = results[0].geometry.location.lng();
+      var request = {
+          destination: new google.maps.LatLng(lati,logno),
+          origin  :  new google.maps.LatLng(addLati,addLongi),
+          travelMode: google.maps.TravelMode[selectedMode]
+      };
+      directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          0.621371
+
+          var textdirection = document.getElementById('showdirectionText'+id);
+            textdirection.innerHTML= "";
+            textdirection.innerHTML +='<div class="directionblock">Distance: '+response.routes[0].legs[0].distance.value/1000+' KM Duration:'+response.routes[0].legs[0].duration.text+'</div>'; 
+            for (var i =0; i < response.routes[0].legs[0].steps.length; i++){
+                textdirection.innerHTML+='<div class="directionblock">'+response.routes[0].legs[0].steps[i].instructions+"</div>"
+            }
+          textdirection.style.display='block';
+          directionsDisplay.setDirections(response);
+       
+        }
+      });
+    }else {
+      return;
+    } 
+
+    });
+    });
+        });
+  
+  }
+
+   function streetview(lat,lang)
+   {
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('map_canvas'),
+            {
+              position: {lat: lat, lng: lang},
+              pov: {heading: 165, pitch: 0},
+              zoom: 1
+            });
+  }
+  function rangeFixed()
+  {
+    var slider = document.getElementById("radius");
+    var output = document.getElementById("range");
+output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+    }
+  }
+
+      function codeAddress() {
+        var address = document.getElementById('searchstore').value;
+        if(address) {
+        var radius = parseInt(document.getElementById('radius').value, 10)*1000;
+        geocoder.geocode( { 'address': address}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            side_bar_html = "";
+            console.log(results[0]);
+            map.setCenter(results[0].geometry.location);
+            var searchCenter = results[0].geometry.location;
+            if (circle) circle.setMap(null);
+            circle = new google.maps.Circle({center:searchCenter,
+                                             radius: radius,
+                                             fillOpacity: 0.35,
+                                             fillColor: "#f3793b",
+                                             map: map});
+            var bounds = new google.maps.LatLngBounds();
+            var foundMarkers = 0;
+
+            for (var i=0; i<gmarkers.length;i++) {
+
+              if (google.maps.geometry.spherical.computeDistanceBetween(gmarkers[i].getPosition(),searchCenter) < radius) {
+
+                document.getElementById('liststores'+i).style.display='block';
+                bounds.extend(gmarkers[i].getPosition())
+                gmarkers[i].setMap(map); 
+                foundMarkers++;
+              } else {
+                  document.getElementById('liststores'+i).style.display='none';
+                if (gmarkers[i] && gmarkers[i].setMap) {
+                    gmarkers[i].setMap(null);
+                }
+               
+              }
+            }
+            document.getElementById("totalstorecount").innerHTML = foundMarkers+"<?php echo '&nbsp;'.__('STORES') ?>";
+
+            if (foundMarkers > 0) {
+              var mcOptions = {gridSize: 50, maxZoom: 4, imagePath:'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'};
+      var markerCluster = new MarkerClusterer(map, gmarkers, mcOptions);
+              map.fitBounds(bounds);
+      } else {
+              map.fitBounds(circle.getBounds());
+            }
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+    }
+    
+ 
+</script>
+ <div class="google_map_locator">
+  <h2><?php echo $helper->getGMapPageTitle(); ?> <span>(<?php echo $helper->getGMapPageheading(); ?>)</span></h2>
+  <p><?php echo $helper->getGMapPageSubheading(); ?></p>
+
+<div class="search_content_block">
+  
+    <div class="search_block">
+
+		<input type="text" name="search" id="searchstore" autocomplete="off">	
+    </div>
+   <div class="slider"> <input type="range" min="1" autocomplete="off" max="<?php echo $helper->getGMapMaxRadius() ?>" value="<?php echo $helper->getGMapDefaultRadius() ?>" class="sliders" id="radius" onChange="rangeFixed(),codeAddress()"><div id=range></div></div>
+<script type="text/javascript">
+      function initit() {
+      var options = {
+  
+       };
+        var input = document.getElementById('searchstore');
+        var autocomplete = new google.maps.places.Autocomplete(input,options);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initit);
+    </script>
+    <div class="buttons_container">
+      <button type="button"  onclick="codeAddress()"><?php echo __('Search');?></button>
+      <button type="reset"  onclick="initMap()"><?php echo __('Reset');?></button>
+    </div>
+ 
+<div class="clear"></div>
+</div>
+  <div class="stores_container">
+    <div class="stores_list">       
+
+        <div class="total_maps store_title" id="total_maps">
+          <?php echo __('Store  List'); ?> <span id="totalstorecount"><?php echo count($Stores).'&nbsp;'.__('STORES'); ?> </span>
+        </div>   
+<div class="store_block">      
+           <ul>
+                    <?php $i=0; $n=1; foreach($Stores as $s_value): ?>
+                    <li class="<?php if($n%2==0):  echo 'white'; endif; ?> liststores" id="liststores<?php echo $i; ?>"> 
+                      <div class="store clearfix">
+                        <div class="storeThumnb">
+                          <img src="<?php echo $storeImage; ?>" >
+                        </div>  
+                        <div class="store_content">     
+                        <?php  $xval= $s_value->getGmapsId()?>
+                          <input type="hidden" name="values" id="<?php echo $i ?>"  value="<?php echo $xval;?>">
+                          <a href="<?php echo $block->getStoresUrl($s_value->getIdentifier()); ?>" title="<?php echo $s_value->getStoreName(); ?>"><?php echo $s_value->getStoreName(); ?></a>
+                          <p><?php echo $s_value->getAddress(); ?></p>
+                          <p><?php echo __('Phone No:') ?> <?php echo $s_value->getStorePhone(); ?></p>
+                          <p><a href="javascript:void(0)" onclick="streetview(<?php echo $s_value->getLatitude(); ?>,<?php echo $s_value->getLongitude(); ?>)">Street</a> &nbsp; | &nbsp;<a href="javascript:void(0)" >Direction</a></p>
+                        </div>
+                         <div class="clearfix"></div>
+                          <div class="direction clearfix">
+                            <div class="direction">
+                            <div class="dir_option clearfix">
+                              <input type="radio" name="directionby<?php echo $xval; ?>" id="driving" value="DRIVING" checked="checked"><label for="driving"><?php echo __('DRIVING'); ?></label>
+                              <input type="radio" name="directionby<?php echo $xval; ?>" id="transit" value="TRANSIT"><label for="transit"><?php echo __('Transit'); ?></label>
+                              <input type="radio" name="directionby<?php echo $xval; ?>" id="walking" value="WALKING"><label for="walking"><?php echo __('Walking'); ?></label>
+                              <input type="radio" id="Bicycling" name="directionby<?php echo $xval; ?>" value="BICYCLING"><label for="Bicycling"><?php echo __('BICYCLING'); ?></label>
+                            </div>
+                            <div class="input_container">
+                              <input type="text" name="direction<?php echo $xval; ?>" id="direction<?php echo $xval; ?>" autocomplete="off">
+                              <script type="text/javascript">
+                                function initit<?php echo $xval; ?>() {
+                                var options = {
+                            
+                                 };
+                                  var input = document.getElementById('direction<?php echo $xval; ?>');
+                                  var autocomplete = new google.maps.places.Autocomplete(input,options);
+                              }
+              
+                              google.maps.event.addDomListener(window, 'load', initit<?php echo $xval; ?>);
+                              </script>
+                              <input type="text" autocomplete="off" name="current_direction" value="<?php echo $s_value->getAddress(); ?>" readonly="true">
+                              <button type="button" onclick="calcRoute(<?php echo $s_value->getLatitude(); ?>,<?php echo $s_value->getLongitude(); ?>,<?php echo $xval; ?>)" ><?php echo __('Go');?></button>
+                            </div>
+                            <div id="showdirectionText<?php echo $xval; ?>" class="address_direction_block"></div>
+                          </div>
+                        </div>
+                      </div> 
+                    </li>
+                        <?php $i++;$n++; endforeach; ?>          
+                 </ul>       
+        </div>
+
+        <div class="store_title"> <?php echo __('Tags');?> </div>
+          <div class="tags_block">
+            <ul>
+              <?php 
+      foreach ($allTags as $tag):
+      ?>
+     <li> <a href="<?php echo $block->getUrl($gMapTagUrl.'/'.str_replace(' ','-', $tag->getTagName())) ?>"><?php echo $tag->getTagName() ?></a></li> 
+      <?php
+      endforeach;
+        ?>
+            
+            </ul>
+          </div>
+        
+    <!-- </div> -->
+</div> 
+    <div class="map_locator_rightside">
+
+<div class="map" >         
+      <div id="map_canvas" style="height:550px;" ></div>
+    
+</div> 
+</div> 
+</div> 
+<div id="control"></div>
+</div>
+<script type="text/javascript">
+  require(['jquery', 'jquery/ui'], function($){
+  $(document).ready(function(){
+  initMap();rangeFixed();
+});
+});
+</script>
+<?php endif; ?>
+
+    
+
+
