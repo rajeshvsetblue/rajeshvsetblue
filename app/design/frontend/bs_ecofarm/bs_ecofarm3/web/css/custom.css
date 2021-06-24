@@ -361,9 +361,9 @@ h3.post-title {
 .product-item .product-info .product-item-name a{
     color: #65492E  !important;
 }
-.product-item .product-info .price-box .price{
-    color: #65492E  !important;
-}
+/*.product-item .product-info .price-box .price{*/
+/*    color: #65492E  !important;*/
+/*}*/
 
 
 /** testimonial **/
@@ -601,7 +601,7 @@ h2.title {
 .cart.main.actions .action.continue:hover {
     background-color: #65492e;
     border: 1px solid #65492e;
-    color:#fff;
+    color:#fff !important;
 }
 
 
@@ -1186,7 +1186,7 @@ button#top-cart-btn-checkout {
 
 .price {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
 }
 .cart-summary .grand.totals .price {.checkout-index-index .page-title-wrapper
     font-weight: 700;
@@ -1249,7 +1249,7 @@ div#checkout-review-table-wrapper h3 {
     border: 1px solid #65492e;
     background-color: #f8efe0;
     color: #000;
-    padding: 7px 30px;
+    padding: 7px 30px !important;
     border-radius: 40px;
     font-weight: 700;
 }
@@ -1408,4 +1408,67 @@ a.action.back {
 }
 .btn-facebook:hover {
     color: #fff !important;
+}
+.testimo-slider .owl-theme:hover .owl-buttons .owl-prev {
+    left: -22px;
+}
+
+.testimo-slider .owl-theme:hover .owl-buttons .owl-next {
+    right:  -22px;
+}
+button.action.save.primary {
+    background-color: #e61e77 !important;
+    border: 1px solid #e61e77 !important;
+}
+.link-register-forgot p a {
+    color: #EC337E !important;
+}
+
+button#opcheckout-login-button {
+    background-color: #EC337E;
+}
+button#ajaxwishlist {
+    background-color: #EC337E;
+    border: 1px solid #EC337E;
+}
+.ajaxsuite-popup-wrapper .modal-popup._inner-scroll .modal-inner-wrap .modal-content #mb-ajaxsuite-popup-wrapper .product-name strong {
+    color: #000;
+}
+.form-wishlist-items button {
+    background-color: #ec337e !important;
+    border: 1px solid #ec337e !important;
+    border-radius: 50px !important
+}
+.product-item .actions-primary, .product-list-item .actions-primary{
+    z-index: 9;
+}
+a.action.primary.continue {
+    background-color: #ec337e;
+    border: 1px solid #ec337e;
+}
+a.action.primary.continue:hover {
+    background-color: #ec337e;
+    border: 1px solid #ec337e;
+    color: #fff !important;
+}
+a.action.print {
+    color: #ec337e;
+    font-size: 16px;
+    font-weight: 700;
+}
+.cart-empty a {
+    color: #ec337e;
+}
+button.action.tocart.primary {
+    background-color: #ec337e;
+    border: 1px solid #ec337e;
+}
+.field.item.choice {
+    margin-bottom: 0;
+}
+.action.edit {
+    color: #ec337e;
+}
+.action.view {
+    color: #ec337e !important;
 }

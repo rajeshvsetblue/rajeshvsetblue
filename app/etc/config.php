@@ -277,6 +277,7 @@ return [
         'Rokanthemes_Testimonial' => 1,
         'Rokanthemes_Themeoption' => 1,
         'Rokanthemes_VerticalMenu' => 1,
+        'Setblue_PriceDecimal' => 1,
         'Temando_ShippingRemover' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
